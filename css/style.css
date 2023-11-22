@@ -440,12 +440,12 @@ img {
   display: flex;
   justify-content: space-between;
   background-color: #BFFF00;
-  padding: 18px 64px;
+  padding: 18px 32px;
 }
 .page-header__left-side {
   display: flex;
   align-items: center;
-  gap: 72px;
+  gap: 32px;
 }
 .page-header__burger {
   width: 40px;
@@ -456,6 +456,7 @@ img {
   background-color: #ffffff;
   border-radius: 50%;
   cursor: pointer;
+  outline: 4px solid rgba(248, 255, 226, 0.6);
 }
 
 .user-menu {
@@ -475,6 +476,14 @@ img {
   background-color: #ffffff;
   border-radius: 50%;
   cursor: pointer;
+  outline: 4px solid rgba(248, 255, 226, 0.6);
+}
+.user-menu__current-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
 }
 .user-menu__photo {
   display: flex;
@@ -482,4 +491,19 @@ img {
   height: 60px;
   border-radius: 50%;
   overflow: hidden;
+  outline: 4px solid rgba(248, 255, 226, 0.6);
+  margin-left: 16px;
+}
+.user-menu__person {
+  display: flex;
+  flex-direction: column;
+}
+.user-menu__name {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+.user-menu__status {
+  letter-spacing: 0.9px;
 }/*# sourceMappingURL=style.css.map */

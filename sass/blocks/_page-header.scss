@@ -2,12 +2,12 @@
     display: flex;
     justify-content: space-between;
     background-color: $bg-primary;
-    padding: 18px 64px;
+    padding: 18px 32px;
 
     &__left-side {
         display: flex;
         align-items: center;
-        gap: 72px;
+        gap: 32px;
     }
 
     &__burger {
@@ -19,5 +19,6 @@
         background-color: $bg-main;
         border-radius: 50%;
         cursor: pointer;
+        outline: 4px solid $border-color;
     }
 }
