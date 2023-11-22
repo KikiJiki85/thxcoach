@@ -1,0 +1,23 @@
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $bg-primary;
+    padding: 18px 64px;
+
+    &__left-side {
+        display: flex;
+        align-items: center;
+        gap: 72px;
+    }
+
+    &__burger {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $bg-main;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
