@@ -14,6 +14,7 @@
         border-radius: 50%;
         cursor: pointer;
         outline: 4px solid $border-color;
+        @include hover-effect;
     }
 
     &__current-user {
@@ -43,10 +44,6 @@
         font-size: 18px;
         font-weight: 600;
         line-height: 24px;
-        letter-spacing: 1px;
-    }
-
-    &__status {
-        letter-spacing: 0.9px;
+        letter-spacing: 0;
     }
 }
