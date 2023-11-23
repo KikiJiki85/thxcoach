@@ -1,0 +1,8 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+    background-color: $bg-main;
+    width: 100%;
+}

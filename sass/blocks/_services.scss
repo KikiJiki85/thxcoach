@@ -1,0 +1,65 @@
+.services {
+    display: flex;
+    gap: 24px;
+
+    &__header {
+        margin: 0;
+        color: $font-color-primary;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+    }
+
+    &__text {
+        margin: 0;
+        color: rgba(80, 80, 80, 0.60);
+
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+    }
+
+    &__connect-watch,
+    &__find-coach,
+    &__coach-service {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 16px;
+        @include block-decor;
+        position: relative;
+    }
+
+    &__connect-watch {
+        &-close {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            display: block;
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: transparent;
+            transition: all 0.5s;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 19px;
+                height: 3px;
+                top: 50%;
+                right: 50%;
+                background-color: #000;
+            }
+
+            &::before {
+                transform: translate(-50%, -50%) rotate(135deg);
+            }
+
+            &::after {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+}
