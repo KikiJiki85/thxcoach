@@ -376,7 +376,7 @@ template {
   height: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: #F2F2F2;
+  background-color: #ffffff;
 }
 
 *,
@@ -515,7 +515,6 @@ img {
 
 .page-main {
   display: flex;
-  gap: 32px;
 }
 
 .side-menu__navigation {
@@ -565,6 +564,11 @@ img {
 .services {
   display: flex;
   gap: 24px;
+  align-items: flex-start;
+}
+.services__text-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 .services__header {
   margin: 0;
@@ -580,7 +584,19 @@ img {
   font-weight: 500;
   line-height: 18px;
 }
-.services__connect-watch, .services__find-coach, .services__coach-service {
+.services__connect-watch {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  position: relative;
+  width: 33.333%;
+}
+.services__find-coach, .services__coach-service {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -590,29 +606,25 @@ img {
   border-radius: 24px;
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
   position: relative;
+  width: 33.33%;
 }
-.services__connect-watch-close {
+.services__connect-watch-close, .services__find-coach-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
   position: absolute;
-  display: block;
+  right: 12px;
+  top: 11px;
   cursor: pointer;
   border-radius: 50%;
   background-color: transparent;
   transition: all 0.5s;
 }
-.services__connect-watch-close::before, .services__connect-watch-close::after {
-  content: "";
-  position: absolute;
-  width: 19px;
-  height: 3px;
-  top: 50%;
-  right: 50%;
-  background-color: #000;
+.services__connect-watch-close:hover, .services__find-coach-close:hover {
+  background-color: #BFFF00;
 }
-.services__connect-watch-close::before {
-  transform: translate(-50%, -50%) rotate(135deg);
-}
-.services__connect-watch-close::after {
-  transform: translate(-50%, -50%) rotate(45deg);
+.services--disabled {
+  background-color: #F8F8F8;
 }/*# sourceMappingURL=style.css.map */

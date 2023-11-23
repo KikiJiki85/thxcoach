@@ -1,6 +1,12 @@
 .services {
     display: flex;
     gap: 24px;
+    align-items: flex-start;
+
+    &__text-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
 
     &__header {
         margin: 0;
@@ -12,14 +18,24 @@
 
     &__text {
         margin: 0;
-        color: rgba(80, 80, 80, 0.60);
-
+        color: $font-color-secondary;
         font-size: 12px;
         font-weight: 500;
         line-height: 18px;
     }
 
-    &__connect-watch,
+    &__connect-watch {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 16px;
+        @include block-decor;
+        position: relative;
+        width: 33.333%;
+
+    }
+
     &__find-coach,
     &__coach-service {
         display: flex;
@@ -29,37 +45,15 @@
         padding: 16px;
         @include block-decor;
         position: relative;
+        width: 33.33%;
     }
 
-    &__connect-watch {
-        &-close {
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            display: block;
-            cursor: pointer;
-            border-radius: 50%;
-            background-color: transparent;
-            transition: all 0.5s;
+    &__connect-watch-close,
+    &__find-coach-close {
+        @include close-decor;
+    }
 
-            &::before,
-            &::after {
-                content: '';
-                position: absolute;
-                width: 19px;
-                height: 3px;
-                top: 50%;
-                right: 50%;
-                background-color: #000;
-            }
-
-            &::before {
-                transform: translate(-50%, -50%) rotate(135deg);
-            }
-
-            &::after {
-                transform: translate(-50%, -50%) rotate(45deg);
-            }
-        }
+    &--disabled {
+        background-color: $bg-super-light-grey;
     }
 }
