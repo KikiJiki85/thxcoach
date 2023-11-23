@@ -1,0 +1,45 @@
+.schedule {
+    display: flex;
+    flex-direction: column;
+    @include block-decor;
+    padding: 16px;
+    gap: 18px;
+
+    &__header-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__header {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    &__month {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+    &__previous-month,
+    &__next-month {
+        cursor: pointer;
+        margin-right: 5px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+}

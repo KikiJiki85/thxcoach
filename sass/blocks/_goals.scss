@@ -28,7 +28,7 @@
     &__list {
         @include list-reset;
         display: flex;
-        gap: 32px;
+        gap: 24px;
     }
 
     &__next-goal {

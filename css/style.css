@@ -718,7 +718,7 @@ img {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 32px;
+  gap: 24px;
 }
 .goals__next-goal {
   background-color: #ffffff;
@@ -765,4 +765,55 @@ img {
   display: flex;
   flex-direction: column;
   gap: 2px;
+}
+.goal__bottom-header {
+  color: rgba(80, 80, 80, 0.6);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.goal__bottom-info {
+  color: #505050;
+  font-weight: 500;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  padding: 16px;
+  gap: 18px;
+}
+.schedule__header-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.schedule__header {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.schedule__month {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+.schedule__previous-month, .schedule__next-month {
+  cursor: pointer;
+  margin-right: 5px;
+}
+.schedule__previous-month:hover, .schedule__next-month:hover {
+  transform: scale(1.1);
+}
+.schedule__calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }/*# sourceMappingURL=style.css.map */

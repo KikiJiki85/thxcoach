@@ -42,4 +42,16 @@
         flex-direction: column;
         gap: 2px;
     }
+
+    &__bottom-header {
+        color: $font-color-secondary;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    &__bottom-info {
+        color: $font-color-tertiary;
+        font-weight: 500;
+    }
 }
