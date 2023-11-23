@@ -560,6 +560,10 @@ img {
   background-color: #ffffff;
   width: 100%;
 }
+.main-content__plans {
+  display: flex;
+  gap: 24px;
+}
 
 .services {
   display: flex;
@@ -569,6 +573,7 @@ img {
 .services__text-wrapper {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 .services__header {
   margin: 0;
@@ -584,29 +589,27 @@ img {
   font-weight: 500;
   line-height: 18px;
 }
-.services__connect-watch {
+.services__connect-watch, .services__find-coach, .services__coach-service {
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   gap: 8px;
   padding: 16px;
-  background-color: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
   position: relative;
   width: 33.333%;
 }
-.services__find-coach, .services__coach-service {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 8px;
-  padding: 16px;
+.services__connect-watch {
+  flex-direction: row;
   background-color: #ffffff;
   border-radius: 24px;
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
-  position: relative;
-  width: 33.33%;
+}
+.services__find-coach {
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+}
+.services__find-coach, .services__coach-service {
+  flex-direction: column;
 }
 .services__connect-watch-close, .services__find-coach-close {
   display: flex;
@@ -627,4 +630,53 @@ img {
 }
 .services--disabled {
   background-color: #F8F8F8;
+  border-radius: 24px;
+}
+
+.todays-training {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 33.33%;
+}
+.todays-training__header {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  margin: 0;
+}
+.todays-training__activity {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+}
+.todays-training__activity-header {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+}
+.todays-training__header-wrapper, .todays-training__stats-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todays-training__distance, .todays-training__pace, .todays-training__type {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.todays-training__stats-header {
+  color: rgba(80, 80, 80, 0.6);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.todays-training__stats-text {
+  color: #505050;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */

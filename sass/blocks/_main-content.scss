@@ -5,4 +5,9 @@
     padding: 32px;
     background-color: $bg-main;
     width: 100%;
+
+    &__plans {
+        display: flex;
+        gap: 24px;
+    }
 }

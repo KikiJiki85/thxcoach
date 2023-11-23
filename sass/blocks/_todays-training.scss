@@ -1,0 +1,56 @@
+.todays-training {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 33.33%;
+
+    &__header {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+        margin: 0;
+    }
+
+    &__activity {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+        @include block-decor;
+    }
+
+    &__activity-header {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        margin: 0;
+    }
+
+    &__header-wrapper,
+    &__stats-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__distance,
+    &__pace,
+    &__type {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    &__stats-header {
+        color: $font-color-secondary;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    &__stats-text {
+        color: $font-color-tertiary;
+        font-weight: 500;
+    }
+
+}
