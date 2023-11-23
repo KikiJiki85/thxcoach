@@ -563,6 +563,13 @@ img {
 .main-content__plans {
   display: flex;
   gap: 24px;
+  align-items: stretch;
+}
+.main-content__todays-training {
+  width: 33.33%;
+}
+.main-content__goals {
+  width: 66.66%;
 }
 
 .services {
@@ -637,7 +644,6 @@ img {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 33.33%;
 }
 .todays-training__header {
   font-size: 16px;
@@ -648,11 +654,13 @@ img {
 .todays-training__activity {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 16px;
   padding: 16px;
   background-color: #ffffff;
   border-radius: 24px;
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  flex-grow: 1;
 }
 .todays-training__activity-header {
   font-size: 18px;
@@ -679,4 +687,82 @@ img {
 .todays-training__stats-text {
   color: #505050;
   font-weight: 500;
+}
+
+.goals {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.goals__header-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.goals__header {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+.goals__view-all {
+  color: rgba(80, 80, 80, 0.6);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+.goals__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 32px;
+}
+.goals__next-goal {
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  flex-grow: 1;
+}
+
+.goal {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+}
+.goal__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.goal__header-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.goal__type {
+  margin: 0;
+  color: #505050;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.goal__name {
+  margin: 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.goal__bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.goal__bottom-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+.goals {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__header-wrapper {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    &__header {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+    }
+
+    &__view-all {
+        color: $font-color-secondary;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+    }
+
+    &__list {
+        @include list-reset;
+        display: flex;
+        gap: 32px;
+    }
+
+    &__next-goal {
+        @include block-decor;
+        flex-grow: 1;
+    }
+}

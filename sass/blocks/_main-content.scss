@@ -9,5 +9,14 @@
     &__plans {
         display: flex;
         gap: 24px;
+        align-items: stretch;
+    }
+
+    &__todays-training {
+        width: 33.33%;
+    }
+
+    &__goals {
+        width: 66.66%;
     }
 }

@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 33.33%;
 
     &__header {
         font-size: 16px;
@@ -14,9 +13,11 @@
     &__activity {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: 16px;
         padding: 16px;
         @include block-decor;
+        flex-grow: 1;
     }
 
     &__activity-header {
