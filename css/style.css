@@ -636,7 +636,7 @@ img {
   background-color: #BFFF00;
 }
 .services--disabled {
-  background-color: #F8F8F8;
+  background-color: #FBFBFB;
   border-radius: 24px;
 }
 
@@ -816,4 +816,52 @@ img {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+.schedule__date-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 8px;
+  padding-right: 16px;
+}
+.schedule__day {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  background-color: #FBFBFB;
+  padding: 8px 4px;
+  min-height: 114px;
+  gap: 4px;
+}
+.schedule__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+}
+.schedule__date {
+  color: #797979;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.schedule__activity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 16px;
+  background: var(--bg-white, #FFF);
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+}
+.schedule__activity-name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-right: auto;
 }/*# sourceMappingURL=style.css.map */
