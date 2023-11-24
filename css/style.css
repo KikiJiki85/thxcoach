@@ -854,7 +854,7 @@ img {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 8px;
+  padding: 4px 16px;
   border-radius: 16px;
   background: var(--bg-white, #FFF);
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
@@ -864,4 +864,15 @@ img {
   font-weight: 500;
   line-height: 18px;
   margin-right: auto;
+}
+
+.coach {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  width: 33.33%;
 }/*# sourceMappingURL=style.css.map */
