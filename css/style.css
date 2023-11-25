@@ -875,4 +875,36 @@ img {
   border-radius: 24px;
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
   width: 33.33%;
+  position: relative;
+}
+.coach__prof, .coach__name, .coach__paid, .coach__expires {
+  margin: 0;
+}
+.coach__prof {
+  margin-bottom: 4px;
+  color: #505050;
+  font-size: 12px;
+}
+.coach__name {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.coach__paid {
+  margin-bottom: 2px;
+  color: rgba(80, 80, 80, 0.6);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.coach__expires {
+  font-weight: 500;
+  color: #505050;
+}
+.coach__options {
+  position: absolute;
+  top: 16px;
+  right: 21px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
