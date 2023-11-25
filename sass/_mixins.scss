@@ -39,6 +39,10 @@
     box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.40);
 }
 
+@mixin block-hover {
+    &:hover {}
+}
+
 @mixin close-decor {
     display: flex;
     align-items: center;
@@ -54,6 +58,6 @@
     transition: all 0.5s;
 
     &:hover {
-        background-color: $bg-primary;
+        background-color: $bg-middle-light-grey;
     }
 }

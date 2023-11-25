@@ -633,7 +633,7 @@ img {
   transition: all 0.5s;
 }
 .services__connect-watch-close:hover, .services__find-coach-close:hover {
-  background-color: #BFFF00;
+  background-color: #F2F2F2;
 }
 .services--disabled {
   background-color: #FBFBFB;
@@ -829,7 +829,7 @@ img {
   flex-direction: column;
   border-radius: 24px;
   background-color: #FBFBFB;
-  padding: 8px 4px;
+  padding: 8px 16px;
   min-height: 114px;
   gap: 4px;
 }
@@ -842,6 +842,7 @@ img {
   border: none;
   border-radius: 24px;
   cursor: pointer;
+  background-color: #F2F2F2;
 }
 .schedule__date {
   color: #797979;
