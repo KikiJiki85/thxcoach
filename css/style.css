@@ -703,7 +703,7 @@ img {
 }
 @media (hover: hover) {
   .services__connect-watch-close:hover .close-icon, .services__find-coach-close:hover .close-icon {
-    fill: #293133;
+    fill-opacity: 1;
   }
 }
 .services--disabled {
@@ -940,7 +940,8 @@ img {
 }
 .schedule__calendar {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(50px, 1fr));
+  grid-auto-flow: dense;
   grid-template-rows: repeat(5, 1fr);
   gap: 8px;
 }
@@ -956,9 +957,8 @@ img {
   flex-direction: column;
   border-radius: 24px;
   background-color: #FBFBFB;
-  padding: 8px 16px;
+  padding: 8px 4px;
   gap: 4px;
-  min-width: 145px;
   min-height: 114px;
   overflow: hidden;
 }
