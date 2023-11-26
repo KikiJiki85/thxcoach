@@ -30,10 +30,18 @@
     &__coach-service {
         display: flex;
         justify-content: flex-start;
-        gap: 8px;
         padding: 16px;
         position: relative;
         width: 33.333%;
+    }
+
+    &__connect-watch {
+        gap: 16px;
+    }
+
+    &__find-coach,
+    &__coach-service {
+        gap: 8px;
     }
 
     &__connect-watch {

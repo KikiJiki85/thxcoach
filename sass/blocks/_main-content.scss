@@ -20,3 +20,10 @@
         width: 66.66%;
     }
 }
+
+@media (max-width: 992px) {
+    .main-content {
+        padding: 24px;
+        gap: 24px;
+    }
+}

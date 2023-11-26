@@ -3,7 +3,7 @@
     flex-direction: column;
     @include block-decor;
     padding: 16px;
-    gap: 18px;
+    gap: 12px;
 
     &__header-wrapper {
         display: flex;
@@ -48,9 +48,10 @@
 
     &__date-wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         padding-left: 8px;
         padding-right: 16px;
+        margin-bottom: 4px;
     }
 
     &__day {
@@ -59,8 +60,10 @@
         border-radius: 24px;
         background-color: $bg-super-light-grey;
         padding: 8px 16px;
-        min-height: 114px;
         gap: 4px;
+        min-width: 145px;
+        min-height: 114px;
+        overflow: hidden;
     }
 
     &__add {
@@ -86,8 +89,8 @@
     &__activity {
         display: flex;
         align-items: center;
-        gap: 8px;
-        padding: 4px 16px;
+        gap: 12px;
+        padding: 4px 8px;
         border-radius: 16px;
         background: var(--bg-white, #FFF);
         box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.40);
@@ -99,4 +102,22 @@
         line-height: 18px;
         margin-right: auto;
     }
+}
+
+@media (min-width: 1200px) {
+    .schedule {
+        &__day {
+            max-height: 130px;
+        }
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .schedule {
+        &__day {
+            max-height: 122px;
+        }
+    }
+
 }
