@@ -23,6 +23,11 @@
         font-style: normal;
         font-weight: 500;
         line-height: 18px;
+        transition: color 0.5s;
+
+        &:hover {
+            color: #505050;
+        }
     }
 
     &__list {

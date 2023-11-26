@@ -609,11 +609,25 @@ img {
   background-color: #ffffff;
   border-radius: 24px;
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  transition: all 0.3s;
+}
+.services__connect-watch:hover {
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
+}
+.services__connect-watch:has(.close-block:active) {
+  transform: scale(0.95);
 }
 .services__find-coach {
   background-color: #ffffff;
   border-radius: 24px;
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  transition: all 0.3s;
+}
+.services__find-coach:hover {
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
+}
+.services__find-coach:has(.close-block:active) {
+  transform: scale(0.95);
 }
 .services__find-coach, .services__coach-service {
   flex-direction: column;
@@ -632,12 +646,19 @@ img {
   background-color: transparent;
   transition: all 0.5s;
 }
-.services__connect-watch-close:hover, .services__find-coach-close:hover {
-  background-color: #F2F2F2;
+.services__connect-watch-close:hover .close-icon, .services__find-coach-close:hover .close-icon {
+  fill: #293133;
 }
 .services--disabled {
   background-color: #FBFBFB;
   border-radius: 24px;
+  transition: all 0.5s;
+}
+.services--disabled:hover {
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+}
+.services__close-icon {
+  transition: all 0.5s;
 }
 
 .todays-training {
@@ -660,7 +681,14 @@ img {
   background-color: #ffffff;
   border-radius: 24px;
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  transition: all 0.3s;
   flex-grow: 1;
+}
+.todays-training__activity:hover {
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
+}
+.todays-training__activity:has(.close-block:active) {
+  transform: scale(0.95);
 }
 .todays-training__activity-header {
   font-size: 18px;
@@ -712,6 +740,10 @@ img {
   font-style: normal;
   font-weight: 500;
   line-height: 18px;
+  transition: color 0.5s;
+}
+.goals__view-all:hover {
+  color: #505050;
 }
 .goals__list {
   list-style: none;
@@ -724,7 +756,14 @@ img {
   background-color: #ffffff;
   border-radius: 24px;
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  transition: all 0.3s;
   flex-grow: 1;
+}
+.goals__next-goal:hover {
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
+}
+.goals__next-goal:has(.close-block:active) {
+  transform: scale(0.95);
 }
 
 .goal {
@@ -783,8 +822,15 @@ img {
   background-color: #ffffff;
   border-radius: 24px;
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  transition: all 0.3s;
   padding: 16px;
   gap: 18px;
+}
+.schedule:hover {
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
+}
+.schedule:has(.close-block:active) {
+  transform: scale(0.95);
 }
 .schedule__header-wrapper {
   display: flex;
@@ -875,8 +921,15 @@ img {
   background-color: #ffffff;
   border-radius: 24px;
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  transition: all 0.3s;
   width: 33.33%;
   position: relative;
+}
+.coach:hover {
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
+}
+.coach:has(.close-block:active) {
+  transform: scale(0.95);
 }
 .coach__prof, .coach__name, .coach__paid, .coach__expires {
   margin: 0;
@@ -906,6 +959,8 @@ img {
 .coach__options {
   position: absolute;
   top: 16px;
-  right: 21px;
+  right: 4px;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
 }/*# sourceMappingURL=style.css.map */
