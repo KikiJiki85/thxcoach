@@ -786,14 +786,13 @@ img {
 
 .goal {
   display: flex;
-  justify-content: space-between;
   overflow: hidden;
-  gap: 16px;
   padding: 16px;
 }
 .goal__info {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: 16px;
   min-width: 0;
 }
@@ -828,6 +827,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  width: 50%;
 }
 .goal__bottom-header {
   color: rgba(80, 80, 80, 0.6);
