@@ -1,6 +1,7 @@
 .goal {
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
     gap: 16px;
     padding: 16px;
 
@@ -8,11 +9,14 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
+        min-width: 0;
     }
 
     &__header-wrapper {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
         gap: 6px;
     }
 
@@ -24,12 +28,15 @@
         line-height: 18px;
     }
 
+
     &__name {
         margin: 0;
         font-size: 18px;
         font-style: normal;
         font-weight: 600;
         line-height: 24px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     &__bottom-wrapper {
@@ -53,5 +60,10 @@
     &__bottom-info {
         color: $font-color-tertiary;
         font-weight: 500;
+    }
+
+    &__days-left {
+        width: 68px;
+        height: 68px;
     }
 }

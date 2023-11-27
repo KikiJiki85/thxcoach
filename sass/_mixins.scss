@@ -47,7 +47,7 @@
 
     @media (hover: hover) {
 
-        &:hover {
+        &:not(.schedule):hover {
             box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.60);
         }
     }

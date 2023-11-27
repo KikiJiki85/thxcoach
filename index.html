@@ -160,6 +160,7 @@
                                 <div class="goal__header-wrapper">
                                     <h4 class="goal__type">Main race</h4>
                                     <p class="goal__name">BMW Helsinki Marathon</p>
+               
                                 </div>
                                 <div class="goal__bottom-wrapper">
                                     <div class="goal__bottom-column">
@@ -172,7 +173,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <img src="./assets/img/days.svg" alt="Days left">
+                            <img class="goal__days-left" src="./assets/img/days-left.svg" alt="Days left">
                         </li>
                         <li class="goals__next-goal goal">
                             <div class="goal__info">
@@ -191,7 +192,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <img src="./assets/img/days.svg" alt="Days left">
+                            <img class="goal__days-left"  src="./assets/img/days-left.svg" alt="Days left">
                         </li>
 
 
@@ -204,12 +205,14 @@
                     <h3 class="schedule__header">Training schedule</h3>
                     <span class="schedule__month">
                         July 2023
-                        <svg class="schedule__previous-month" width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.0771474 8.3457C0.0771474 8.12598 0.165038 7.93262 0.33203 7.76563L7.29297 0.954102C7.45117 0.795899 7.64453 0.716797 7.87305 0.716797C8.32129 0.716797 8.67285 1.05957 8.67285 1.5166C8.67285 1.74512 8.58496 1.93848 8.44433 2.08789L2.0459 8.3457L8.44434 14.6035C8.58496 14.7529 8.67285 14.9551 8.67285 15.1748C8.67285 15.6318 8.32129 15.9746 7.87305 15.9746C7.64453 15.9746 7.45117 15.8955 7.29297 15.7461L0.33203 8.92578C0.165038 8.76758 0.0771474 8.56543 0.0771474 8.3457Z" fill="#293133"/>
-                        </svg>
-                        <svg class="schedule__next-month" width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.92285 7.6543C8.92285 7.87402 8.83496 8.06738 8.66797 8.23438L1.70703 15.0459C1.54883 15.2041 1.35547 15.2832 1.12695 15.2832C0.678711 15.2832 0.327148 14.9404 0.327148 14.4834C0.327148 14.2549 0.415039 14.0615 0.555664 13.9121L6.9541 7.6543L0.555664 1.39648C0.415039 1.24707 0.327148 1.04492 0.327148 0.825195C0.327148 0.368164 0.678711 0.0253906 1.12695 0.0253906C1.35547 0.0253906 1.54883 0.104492 1.70703 0.253906L8.66797 7.07422C8.83496 7.23242 8.92285 7.43457 8.92285 7.6543Z" fill="#293133"/>
-                        </svg>              
+                        <svg class="schedule__previous-month" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="schedule__month-select-icon" d="M0.585938 7.6543C0.585938 7.54297 0.606445 7.44043 0.647461 7.34668C0.688477 7.24707 0.75 7.15625 0.832031 7.07422L7.80176 0.253906C7.95996 0.101563 8.15039 0.0253906 8.37305 0.0253906C8.52539 0.0253906 8.66016 0.0605469 8.77734 0.130859C8.90039 0.201172 8.99707 0.297852 9.06738 0.420898C9.14355 0.538086 9.18164 0.672852 9.18164 0.825195C9.18164 1.04199 9.10254 1.23242 8.94434 1.39648L2.5459 7.6543L8.94434 13.9121C9.10254 14.0762 9.18164 14.2666 9.18164 14.4834C9.18164 14.6357 9.14355 14.7705 9.06738 14.8877C8.99707 15.0107 8.90039 15.1074 8.77734 15.1777C8.66016 15.248 8.52539 15.2832 8.37305 15.2832C8.15039 15.2832 7.95996 15.2041 7.80176 15.0459L0.832031 8.23438C0.75 8.15234 0.688477 8.06445 0.647461 7.9707C0.606445 7.87109 0.585938 7.76562 0.585938 7.6543Z" fill="#505050" fill-opacity="0.3"/>
+                            </svg>
+          
+                        <svg class="schedule__next-month" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="schedule__month-select-icon" d="M9.42285 7.6543C9.42285 7.76562 9.39941 7.87109 9.35254 7.9707C9.31152 8.06445 9.25 8.15234 9.16797 8.23438L2.20703 15.0459C2.04883 15.2041 1.85547 15.2832 1.62695 15.2832C1.48047 15.2832 1.3457 15.248 1.22266 15.1777C1.09961 15.1074 1.00293 15.0107 0.932617 14.8877C0.862305 14.7705 0.827148 14.6357 0.827148 14.4834C0.827148 14.2666 0.90332 14.0762 1.05566 13.9121L7.4541 7.6543L1.05566 1.39648C0.90332 1.23242 0.827148 1.04199 0.827148 0.825195C0.827148 0.672852 0.862305 0.538086 0.932617 0.420898C1.00293 0.297852 1.09961 0.201172 1.22266 0.130859C1.3457 0.0605469 1.48047 0.0253906 1.62695 0.0253906C1.85547 0.0253906 2.04883 0.101563 2.20703 0.253906L9.16797 7.07422C9.25 7.15625 9.31152 7.24707 9.35254 7.34668C9.39941 7.44043 9.42285 7.54297 9.42285 7.6543Z" fill="#505050" fill-opacity="0.3"/>
+                            </svg>
+                              
                     </span>
                 </div>
                 <div class="schedule__calendar">
@@ -237,6 +240,90 @@
                                 <span class="schedule__activity-name">Swimming</span>
                             </div>
                             <img class="schedule__activity-icon"  src="./assets/img/swimming.svg" alt="Swimming day">   
+                        </div>
+                    </div>
+                    <div class="schedule__day">
+                        <div class="schedule__date-wrapper">
+                            <span class="schedule__date">02</span>
+                        </div>
+                        <div class="schedule__activity">
+                            <img class="schedule__done-activity" src="./assets//img/done-activity.svg" alt="Check activity">
+                            <div class="schedule__name-wrapper">
+                                <span class="schedule__activity-name">Rest</span>
+                            </div>
+                            <img class="schedule__activity-icon"  src="./assets/img/rest.svg" alt="Rest day">   
+                        </div>
+                    </div>
+                    <div class="schedule__day">
+                        <div class="schedule__date-wrapper">
+                            <span class="schedule__date">03</span>
+                        </div>
+                        <div class="schedule__activity">
+                            <img class="schedule__done-activity" src="./assets//img/done-activity.svg" alt="Check activity">
+                            <div class="schedule__name-wrapper">
+                                <span class="schedule__activity-name">Rest</span>
+                            </div>
+                            <img class="schedule__activity-icon"  src="./assets/img/rest.svg" alt="Rest day">   
+                        </div>
+                    </div>
+                    <div class="schedule__day">
+                        <div class="schedule__date-wrapper">
+                            <span class="schedule__date">04</span>
+                        </div>
+                        <div class="schedule__activity">
+                            <img class="schedule__done-activity" src="./assets//img/done-activity.svg" alt="Check activity">
+                            <div class="schedule__name-wrapper">
+                                <span class="schedule__activity-name">Rest</span>
+                            </div>
+                            <img class="schedule__activity-icon"  src="./assets/img/rest.svg" alt="Rest day">   
+                        </div>
+                    </div>
+                    <div class="schedule__day">
+                        <div class="schedule__date-wrapper">
+                            <span class="schedule__date">05</span>
+                        </div>
+                        <div class="schedule__activity">
+                            <img class="schedule__done-activity" src="./assets//img/done-activity.svg" alt="Check activity">
+                            <div class="schedule__name-wrapper">
+                                <span class="schedule__activity-name">Cycling</span>
+                            </div>
+                            <img class="schedule__activity-icon"  src="./assets/img/cycling.svg" alt="Cycling day">   
+                        </div>
+                    </div>
+                    <div class="schedule__day">
+                        <div class="schedule__date-wrapper">
+                            <span class="schedule__date">06</span>
+                        </div>
+                        <div class="schedule__activity">
+                            <img class="schedule__done-activity" src="./assets//img/done-activity.svg" alt="Check activity">
+                            <div class="schedule__name-wrapper">
+                                <span class="schedule__activity-name">Running</span>
+                            </div>
+                            <img class="schedule__activity-icon"  src="./assets/img/running.svg" alt="Running day">   
+                        </div>
+                    </div>
+                    <div class="schedule__day">
+                        <div class="schedule__date-wrapper">
+                            <span class="schedule__date">07</span>
+                        </div>
+                        <div class="schedule__activity">
+                            <img class="schedule__done-activity" src="./assets//img/done-activity.svg" alt="Check activity">
+                            <div class="schedule__name-wrapper">
+                                <span class="schedule__activity-name">Rest</span>
+                            </div>
+                            <img class="schedule__activity-icon"  src="./assets/img/rest.svg" alt="Rest day">   
+                        </div>
+                    </div>
+                    <div class="schedule__day">
+                        <div class="schedule__date-wrapper">
+                            <span class="schedule__date">08</span>
+                        </div>
+                        <div class="schedule__activity">
+                            <img class="schedule__done-activity" src="./assets//img/done-activity.svg" alt="Check activity">
+                            <div class="schedule__name-wrapper">
+                                <span class="schedule__activity-name">Skiing</span>
+                            </div>
+                            <img class="schedule__activity-icon"  src="./assets/img/skiing.svg" alt="Skiing day">   
                         </div>
                     </div>
                     

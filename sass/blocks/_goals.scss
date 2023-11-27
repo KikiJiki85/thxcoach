@@ -39,6 +39,7 @@
     &__next-goal {
         @include block-decor;
         flex-grow: 1;
+        align-items: flex-start;
     }
 }
 

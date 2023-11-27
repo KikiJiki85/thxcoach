@@ -606,10 +606,10 @@ img {
   align-items: stretch;
 }
 .main-content__todays-training {
-  width: 33.33%;
+  width: 32.33%;
 }
 .main-content__goals {
-  width: 66.66%;
+  width: 66%;
 }
 
 @media (max-width: 992px) {
@@ -634,6 +634,7 @@ img {
   font-size: 16px;
   font-weight: 600;
   line-height: 22px;
+  padding-right: 22px;
 }
 .services__text {
   margin: 0;
@@ -663,7 +664,7 @@ img {
   transition: all 0.3s;
 }
 @media (hover: hover) {
-  .services__connect-watch:hover {
+  .services__connect-watch:not(.schedule):hover {
     box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
   }
 }
@@ -677,7 +678,7 @@ img {
   transition: all 0.3s;
 }
 @media (hover: hover) {
-  .services__find-coach:hover {
+  .services__find-coach:not(.schedule):hover {
     box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
   }
 }
@@ -749,7 +750,7 @@ img {
   flex-grow: 1;
 }
 @media (hover: hover) {
-  .todays-training__activity:hover {
+  .todays-training__activity:not(.schedule):hover {
     box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
   }
 }
@@ -786,6 +787,7 @@ img {
 .goal {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   gap: 16px;
   padding: 16px;
 }
@@ -793,10 +795,13 @@ img {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  min-width: 0;
 }
 .goal__header-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
   gap: 6px;
 }
 .goal__type {
@@ -812,6 +817,8 @@ img {
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .goal__bottom-wrapper {
   display: flex;
@@ -831,6 +838,10 @@ img {
 .goal__bottom-info {
   color: #505050;
   font-weight: 500;
+}
+.goal__days-left {
+  width: 68px;
+  height: 68px;
 }
 
 .goals {
@@ -874,9 +885,10 @@ img {
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
   transition: all 0.3s;
   flex-grow: 1;
+  align-items: flex-start;
 }
 @media (hover: hover) {
-  .goals__next-goal:hover {
+  .goals__next-goal:not(.schedule):hover {
     box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
   }
 }
@@ -903,7 +915,7 @@ img {
   gap: 12px;
 }
 @media (hover: hover) {
-  .schedule:hover {
+  .schedule:not(.schedule):hover {
     box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
   }
 }
@@ -934,9 +946,12 @@ img {
   margin-right: 5px;
 }
 @media (hover: hover) {
-  .schedule__previous-month:hover, .schedule__next-month:hover {
-    transform: scale(1.1);
+  .schedule__previous-month:hover .schedule__month-select-icon, .schedule__next-month:hover .schedule__month-select-icon {
+    fill-opacity: 1;
   }
+}
+.schedule__month-select-icon {
+  transition: all 0.5s;
 }
 .schedule__calendar {
   display: grid;
@@ -957,7 +972,7 @@ img {
   flex-direction: column;
   border-radius: 24px;
   background-color: #FBFBFB;
-  padding: 8px 4px;
+  padding: 8px 16px;
   gap: 4px;
   min-height: 114px;
   overflow: hidden;
@@ -1016,6 +1031,7 @@ img {
 @media (max-width: 1200px) {
   .schedule__day {
     max-height: 122px;
+    padding: 8px 4px;
   }
 }
 .coach {
@@ -1031,7 +1047,7 @@ img {
   position: relative;
 }
 @media (hover: hover) {
-  .coach:hover {
+  .coach:not(.schedule):hover {
     box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
   }
 }
