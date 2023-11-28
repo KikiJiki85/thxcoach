@@ -573,7 +573,7 @@ img {
   height: 44px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1035px) {
   .side-menu__navigation {
     gap: 0;
     padding: 32px 0;
@@ -786,6 +786,7 @@ img {
 
 .goal {
   display: flex;
+  gap: 16px;
   overflow: hidden;
   padding: 16px;
 }
@@ -797,11 +798,7 @@ img {
   min-width: 0;
 }
 .goal__header-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  overflow: hidden;
-  gap: 6px;
+  display: inline-block;
 }
 .goal__type {
   margin: 0;
@@ -816,8 +813,10 @@ img {
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-top: 6px;
 }
 .goal__bottom-wrapper {
   display: flex;
@@ -1006,17 +1005,15 @@ img {
   min-height: 32px;
   max-height: 32px;
 }
-.schedule__name-wrapper {
-  overflow: hidden;
-  margin-left: 12px;
-  margin-right: auto;
-}
 .schedule__activity-name {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: 12px;
 }
 .schedule__activity-icon {
   width: 22px;

@@ -106,18 +106,15 @@
         max-height: 32px;
     }
 
-    &__name-wrapper {
-        overflow: hidden;
-        margin-left: 12px;
-        margin-right: auto;
-    }
-
     &__activity-name {
         font-size: 12px;
         font-weight: 500;
         line-height: 18px;
         text-overflow: ellipsis;
         white-space: nowrap;
+        overflow: hidden;
+        margin-right: auto;
+        margin-left: 12px;
     }
 
     &__activity-icon {

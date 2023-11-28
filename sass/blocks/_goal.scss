@@ -1,5 +1,6 @@
 .goal {
     display: flex;
+    gap: 16px;
     overflow: hidden;
     padding: 16px;
 
@@ -12,11 +13,7 @@
     }
 
     &__header-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        overflow: hidden;
-        gap: 6px;
+        display: inline-block;
     }
 
     &__type {
@@ -34,8 +31,10 @@
         font-style: normal;
         font-weight: 600;
         line-height: 24px;
+        overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        margin-top: 6px;
     }
 
     &__bottom-wrapper {
