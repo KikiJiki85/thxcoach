@@ -42,16 +42,3 @@
         align-items: flex-start;
     }
 }
-
-@media (max-width: 767px) {
-    .goals {
-
-        &__next-goal {
-            flex-grow: 0;
-        }
-
-        &__next-goal:nth-child(n+2) {
-            display: none;
-        }
-    }
-}

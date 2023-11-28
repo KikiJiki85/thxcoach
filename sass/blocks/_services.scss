@@ -93,3 +93,15 @@
     }
 
 }
+
+@media (max-width: 767px) {
+    .services {
+        flex-wrap: wrap;
+
+        &__connect-watch,
+        &__find-coach,
+        &__coach-service {
+            width: 48%;
+        }
+    }
+}

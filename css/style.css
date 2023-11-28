@@ -592,6 +592,124 @@ img {
     display: flex;
   }
 }
+@media (max-width: 767px) {
+  .side-menu {
+    transform: translateX(-45px);
+    position: absolute;
+  }
+}
+.todays-training {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.todays-training__header {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  margin: 0;
+}
+.todays-training__activity {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  transition: all 0.3s;
+  flex-grow: 1;
+}
+@media (hover: hover) {
+  .todays-training__activity:not(.schedule):hover {
+    box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
+  }
+}
+.todays-training__activity:has(.close-block:active) {
+  transform: scale(0.95);
+}
+.todays-training__activity-header {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+}
+.todays-training__header-wrapper, .todays-training__stats-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todays-training__distance, .todays-training__pace, .todays-training__type {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.todays-training__stats-header {
+  color: rgba(80, 80, 80, 0.6);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.todays-training__stats-text {
+  color: #505050;
+  font-weight: 500;
+}
+
+.coach {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  transition: all 0.3s;
+  width: 33.33%;
+  position: relative;
+}
+@media (hover: hover) {
+  .coach:not(.schedule):hover {
+    box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
+  }
+}
+.coach:has(.close-block:active) {
+  transform: scale(0.95);
+}
+.coach__prof, .coach__name, .coach__paid, .coach__expires {
+  margin: 0;
+}
+.coach__prof {
+  margin-bottom: 4px;
+  color: #505050;
+  font-size: 12px;
+}
+.coach__name {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.coach__paid {
+  margin-bottom: 2px;
+  color: rgba(80, 80, 80, 0.6);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.coach__expires {
+  font-weight: 500;
+  color: #505050;
+}
+.coach__options {
+  position: absolute;
+  top: 16px;
+  right: 4px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -616,6 +734,17 @@ img {
   .main-content {
     padding: 24px;
     gap: 24px;
+  }
+}
+@media (max-width: 877px) {
+  .main-content__todays-training {
+    display: none;
+  }
+  .main-content__goals {
+    flex-grow: 1;
+  }
+  .main-content__coach {
+    width: auto;
   }
 }
 .services {
@@ -726,64 +855,14 @@ img {
     width: auto;
   }
 }
-.todays-training {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.todays-training__header {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
-  margin: 0;
-}
-.todays-training__activity {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 16px;
-  background-color: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
-  transition: all 0.3s;
-  flex-grow: 1;
-}
-@media (hover: hover) {
-  .todays-training__activity:not(.schedule):hover {
-    box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
+@media (max-width: 767px) {
+  .services {
+    flex-wrap: wrap;
+  }
+  .services__connect-watch, .services__find-coach, .services__coach-service {
+    width: 48%;
   }
 }
-.todays-training__activity:has(.close-block:active) {
-  transform: scale(0.95);
-}
-.todays-training__activity-header {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
-  margin: 0;
-}
-.todays-training__header-wrapper, .todays-training__stats-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.todays-training__distance, .todays-training__pace, .todays-training__type {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.todays-training__stats-header {
-  color: rgba(80, 80, 80, 0.6);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-}
-.todays-training__stats-text {
-  color: #505050;
-  font-weight: 500;
-}
-
 .goal {
   display: flex;
   gap: 16px;
@@ -895,14 +974,6 @@ img {
   transform: scale(0.95);
 }
 
-@media (max-width: 767px) {
-  .goals__next-goal {
-    flex-grow: 0;
-  }
-  .goals__next-goal:nth-child(n+2) {
-    display: none;
-  }
-}
 .schedule {
   display: flex;
   flex-direction: column;
@@ -971,7 +1042,7 @@ img {
   flex-direction: column;
   border-radius: 24px;
   background-color: #FBFBFB;
-  padding: 8px 16px;
+  padding: 4px 8px;
   gap: 4px;
   min-height: 114px;
   overflow: hidden;
@@ -994,30 +1065,25 @@ img {
   font-weight: 500;
   line-height: 18px;
 }
-.schedule__activity {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  padding: 4px 8px;
-  border-radius: 16px;
-  background: var(--bg-white, #FFF);
-  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
-  min-height: 32px;
-  max-height: 32px;
-}
-.schedule__activity-name {
+.schedule__weekday {
+  display: none;
+  color: var(--fonts-light-grey, rgba(80, 80, 80, 0.6));
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 18px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-right: auto;
-  margin-left: 12px;
 }
-.schedule__activity-icon {
-  width: 22px;
-  height: 24px;
+.schedule__activities-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.schedule__add-activity {
+  display: none;
+  padding: 13px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  background: #F8F8F8;
 }
 
 @media (min-width: 1200px) {
@@ -1031,56 +1097,131 @@ img {
     padding: 8px 4px;
   }
 }
-.coach {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  padding: 16px;
-  background-color: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
-  transition: all 0.3s;
-  width: 33.33%;
-  position: relative;
-}
-@media (hover: hover) {
-  .coach:not(.schedule):hover {
-    box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
+@media (max-width: 767px) {
+  .schedule {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    transition: all 0.3s;
+  }
+  .schedule__day {
+    border-radius: 0;
+    background-color: transparent;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    flex-direction: row;
+    gap: 16px;
+    min-height: 0;
+  }
+  .schedule__calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .schedule__activity {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
+  .schedule__activities-wrapper {
+    flex-grow: 1;
+    gap: 16px;
+  }
+  .schedule__weekday {
+    display: flex;
+  }
+  .schedule__date-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .schedule__date {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  .schedule__add-activity {
+    display: flex;
+    cursor: pointer;
   }
 }
-.coach:has(.close-block:active) {
-  transform: scale(0.95);
+.activity {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 4px 8px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  min-height: 32px;
+  max-height: 32px;
 }
-.coach__prof, .coach__name, .coach__paid, .coach__expires {
-  margin: 0;
+.activity__header-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  background: transparent;
+  flex-grow: 1;
 }
-.coach__prof {
-  margin-bottom: 4px;
-  color: #505050;
+.activity__name {
   font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: 12px;
 }
-.coach__name {
-  margin-bottom: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
+.activity__icon {
+  width: 22px;
+  height: 24px;
 }
-.coach__paid {
-  margin-bottom: 2px;
+.activity__stats {
+  display: none;
+}
+.activity__stats-header {
   color: rgba(80, 80, 80, 0.6);
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
 }
-.coach__expires {
-  font-weight: 500;
+.activity__stats-text {
   color: #505050;
+  font-weight: 500;
 }
-.coach__options {
-  position: absolute;
-  top: 16px;
-  right: 4px;
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
+.activity__field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+@media (max-width: 767px) {
+  .activity {
+    flex-direction: column;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    align-items: stretch;
+    padding: 16px;
+    gap: 16px;
+    box-shadow: 0px 0px 8px 2px rgba(193, 193, 193, 0.4);
+  }
+  .activity__stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .activity__name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-left: 16px;
+  }
+  .activity__icon {
+    width: 48px;
+    height: 48px;
+  }
 }/*# sourceMappingURL=style.css.map */

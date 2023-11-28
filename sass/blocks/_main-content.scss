@@ -27,3 +27,20 @@
         gap: 24px;
     }
 }
+
+@media (max-width: 877px) {
+    .main-content {
+        &__todays-training {
+            display: none;
+        }
+
+        &__goals {
+            flex-grow: 1;
+        }
+
+        &__coach {
+            width: auto;
+        }
+    }
+
+}
