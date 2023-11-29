@@ -147,6 +147,7 @@
         transition: all 0.3s;
 
         &__day {
+            overflow: visible;
             border-radius: 0;
             background-color: transparent;
             max-height: fit-content;

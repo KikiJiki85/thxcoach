@@ -747,6 +747,11 @@ img {
     width: auto;
   }
 }
+@media (max-width: 767px) {
+  .main-content {
+    padding: 24px 16px;
+  }
+}
 .services {
   display: flex;
   gap: 24px;
@@ -763,7 +768,7 @@ img {
   font-size: 16px;
   font-weight: 600;
   line-height: 22px;
-  padding-right: 22px;
+  padding-right: 39px;
 }
 .services__text {
   margin: 0;
@@ -850,11 +855,6 @@ img {
   transition: all 0.5s;
 }
 
-@media (max-width: 991px) {
-  .services__connect-watch, .services__find-coach, .services__coach-service {
-    width: auto;
-  }
-}
 @media (max-width: 767px) {
   .services {
     flex-wrap: wrap;
@@ -1106,6 +1106,7 @@ img {
     transition: all 0.3s;
   }
   .schedule__day {
+    overflow: visible;
     border-radius: 0;
     background-color: transparent;
     max-height: -moz-fit-content;
@@ -1173,7 +1174,9 @@ img {
   white-space: nowrap;
   overflow: hidden;
   margin-right: auto;
-  margin-left: 12px;
+}
+.activity__done {
+  margin-right: 8px;
 }
 .activity__icon {
   width: 22px;
@@ -1207,7 +1210,7 @@ img {
     align-items: stretch;
     padding: 16px;
     gap: 16px;
-    box-shadow: 0px 0px 8px 2px rgba(193, 193, 193, 0.4);
+    border-radius: 24px;
   }
   .activity__stats {
     display: flex;
@@ -1223,5 +1226,20 @@ img {
   .activity__icon {
     width: 48px;
     height: 48px;
+  }
+  .activity__done {
+    width: 24px;
+    height: 24px;
+  }
+  .activity__distance {
+    align-items: flex-start;
+  }
+  .activity__type {
+    align-items: flex-end;
+  }
+}
+@media (min-width: 1200px) {
+  .activity__done {
+    margin-right: 12px;
   }
 }/*# sourceMappingURL=style.css.map */
