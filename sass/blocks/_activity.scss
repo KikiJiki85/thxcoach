@@ -80,7 +80,6 @@
             font-size: 18px;
             font-weight: 600;
             line-height: 24px;
-            margin-left: 16px;
         }
 
         &__icon {
@@ -91,6 +90,7 @@
         &__done {
             width: 24px;
             height: 24px;
+            margin-right: 16px;
         }
 
         &__distance {
@@ -109,13 +109,4 @@
             margin-right: 12px;
         }
     }
-}
-
-@media (max-width: 767px) {
-    .activity {
-        &__done {
-            margin-right: 0;
-        }
-    }
-
 }
