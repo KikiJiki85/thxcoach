@@ -109,5 +109,13 @@
             margin-right: 12px;
         }
     }
+}
+
+@media (max-width: 767px) {
+    .activity {
+        &__done {
+            margin-right: 0;
+        }
+    }
 
 }
