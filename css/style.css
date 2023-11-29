@@ -465,6 +465,14 @@ img {
   }
 }
 
+@media (max-width: 767px) {
+  .page-header {
+    padding: 18px 16px;
+  }
+  .page-header__left-side {
+    gap: 16px;
+  }
+}
 .user-menu {
   list-style: none;
   margin: 0;
@@ -517,6 +525,14 @@ img {
   letter-spacing: 0;
 }
 
+@media (max-width: 767px) {
+  .user-menu__person {
+    display: none;
+  }
+  .user-menu__photo {
+    margin-left: 0;
+  }
+}
 .page-main {
   display: flex;
 }
@@ -777,7 +793,7 @@ img {
   font-weight: 500;
   line-height: 18px;
 }
-.services__connect-watch, .services__find-coach, .services__coach-service {
+.services__item {
   display: flex;
   justify-content: flex-start;
   padding: 16px;
@@ -859,8 +875,16 @@ img {
   .services {
     flex-wrap: wrap;
   }
-  .services__connect-watch, .services__find-coach, .services__coach-service {
+  .services__item {
     width: 48%;
+  }
+}
+@media (max-width: 637px) {
+  .services {
+    flex-direction: column;
+  }
+  .services__item {
+    width: 100%;
   }
 }
 .goal {
@@ -974,6 +998,11 @@ img {
   transform: scale(0.95);
 }
 
+@media (max-width: 637px) {
+  .goals__next-goal:nth-child(n+2) {
+    display: none;
+  }
+}
 .schedule {
   display: flex;
   flex-direction: column;

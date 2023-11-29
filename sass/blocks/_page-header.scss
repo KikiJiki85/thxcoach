@@ -23,3 +23,13 @@
         @include hover-effect;
     }
 }
+
+@media (max-width: 767px) {
+    .page-header {
+        padding: 18px 16px;
+
+        &__left-side {
+            gap: 16px;
+        }
+    }
+}

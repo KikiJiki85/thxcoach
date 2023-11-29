@@ -47,3 +47,15 @@
         letter-spacing: 0;
     }
 }
+
+@media (max-width: 767px) {
+    .user-menu {
+        &__person {
+            display: none;
+        }
+
+        &__photo {
+            margin-left: 0;
+        }
+    }
+}

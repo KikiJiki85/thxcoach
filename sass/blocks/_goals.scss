@@ -42,3 +42,12 @@
         align-items: flex-start;
     }
 }
+
+@media (max-width: 637px) {
+    .goals {
+        &__next-goal:nth-child(n + 2) {
+            display: none;
+        }
+    }
+
+}
