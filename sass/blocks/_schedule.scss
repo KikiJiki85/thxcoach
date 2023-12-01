@@ -72,6 +72,17 @@
         gap: 4px;
         min-height: 114px;
         overflow: hidden;
+        transition: background-color 0.3s;
+
+        @media (hover: hover) {
+            &:not(.schedule__previous-day):not(.schedule__next-month):hover {
+                background-color: #f2f2f2;
+
+                .schedule__add-activity {
+                    display: flex;
+                }
+            }
+        }
     }
 
     &__add {
@@ -115,10 +126,16 @@
         align-items: center;
         border-radius: 24px;
         background: #F8F8F8;
+        cursor: pointer;
     }
 
     &__next-month {
         opacity: 0.4;
+        cursor: default;
+    }
+
+    &__current-day {
+        background-color: #EEFFF4;
     }
 
 }
@@ -194,7 +211,6 @@
 
         &__add-activity {
             display: flex;
-            cursor: pointer;
         }
 
     }
