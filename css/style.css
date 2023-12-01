@@ -1114,6 +1114,9 @@ img {
   border-radius: 24px;
   background: #F8F8F8;
 }
+.schedule__next-month {
+  opacity: 0.4;
+}
 
 @media (min-width: 1200px) {
   .schedule__day {
