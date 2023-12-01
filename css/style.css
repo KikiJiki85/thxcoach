@@ -425,6 +425,30 @@ input[type=radio].visually-hidden {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(36, 36, 36, 0.05);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 5;
+  transition: opacity 0.5s;
+}
+.overlay--show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
 a {
@@ -1117,7 +1141,7 @@ img {
 }
 .schedule__add-activity {
   display: none;
-  padding: 13px 16px;
+  padding: 9px 16px;
   justify-content: center;
   align-items: center;
   border-radius: 24px;
@@ -1191,6 +1215,7 @@ img {
   }
   .schedule__add-activity {
     display: flex;
+    padding: 13px 16px;
   }
 }
 .activity {
@@ -1287,4 +1312,81 @@ img {
   .activity__done {
     margin-right: 12px;
   }
+}
+.type-of-activity-modal {
+  position: absolute;
+  z-index: 10;
+  top: 96px;
+  right: 0;
+  bottom: 0;
+  min-width: 460px;
+  padding: 18px 16px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  transform: translateX(100%);
+  transition: all 0.5s;
+}
+.type-of-activity-modal--show {
+  transform: translateX(0%);
+}
+.type-of-activity-modal__header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 16px;
+}
+.type-of-activity-modal__header {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-left: 124px;
+}
+.type-of-activity-modal__close {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  margin-left: auto;
+  cursor: pointer;
+}
+.type-of-activity-modal__activity-list {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 32px;
+}
+.type-of-activity-modal__activity-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.type-of-activity-modal__img {
+  width: 65px;
+  height: 72px;
+}
+.type-of-activity-modal__text {
+  margin: 0;
+}
+.type-of-activity-modal__continue {
+  padding: 13px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  background: #293133;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

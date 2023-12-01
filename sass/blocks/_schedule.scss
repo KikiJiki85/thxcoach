@@ -121,7 +121,7 @@
 
     &__add-activity {
         display: none;
-        padding: 13px 16px;
+        padding: 9px 16px;
         justify-content: center;
         align-items: center;
         border-radius: 24px;
@@ -211,6 +211,7 @@
 
         &__add-activity {
             display: flex;
+            padding: 13px 16px;
         }
 
     }
