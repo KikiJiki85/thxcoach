@@ -1,0 +1,36 @@
+.activity-list {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        cursor: pointer;
+        transition: all 0.5s;
+        opacity: 0.5;
+    }
+
+    &__img {
+        width: 65px;
+        height: 72px;
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+
+    &__radio:not(:disabled):not(:checked)+label:hover {
+
+        @media (hover: hover) {
+            opacity: 0.9;
+
+        }
+    }
+
+    &__radio:not(:disabled):checked+label {
+        opacity: 1;
+        cursor: default;
+    }
+}
