@@ -1,16 +1,8 @@
-const addActivity = document.querySelectorAll('.schedule__add-activity');
-const activityModal = document.querySelector('.type-of-activity-modal');
-const activityModalClose = document.querySelector('.type-of-activity-modal__close');
-const overlay = document.querySelector('.overlay');
+import activityPick from "./activity.js";
 
-addActivity.forEach(button => {
-    button.addEventListener('click', () => {
-        activityModal.classList.toggle('type-of-activity-modal--show');
-        overlay.classList.toggle('overlay--show');
-    });
-})
+function init() {
+    activityPick();
+}
 
-activityModalClose.addEventListener('click', () => {
-    activityModal.classList.toggle('type-of-activity-modal--show');
-    overlay.classList.toggle('overlay--show');
-});
+
+document.addEventListener('DOMContentLoaded', init);

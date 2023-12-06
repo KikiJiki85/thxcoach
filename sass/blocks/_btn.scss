@@ -1,0 +1,22 @@
+.btn {
+    padding: 13px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    background: $bg-dark-grey;
+    color: $font-color-fifth;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    cursor: pointer;
+    border: none;
+
+    transition: opacity 0.5s;
+
+    @media (hover: hover) {
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

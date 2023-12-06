@@ -1,0 +1,113 @@
+.activity-picked {
+    position: absolute;
+    z-index: 11;
+    top: 96px;
+    right: 0;
+    bottom: 0;
+    min-width: 460px;
+
+    background-color: $bg-main;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    // transform: translateX(100%);
+    transition: all 0.5s;
+
+    &__header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 16px;
+        border-bottom: 1px solid $bg-middle-light-grey;
+
+    }
+
+    &__header {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    &__back,
+    &__calendar {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: opacity 0.5s;
+        background-color: $bg-middle-light-grey;
+
+        @media (hover: hover) {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__btn {
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+
+    &__middle-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 0 16px;
+    }
+
+    &__middle-img {
+        width: 48px;
+        height: 48px;
+    }
+
+    &__middle-text {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+        margin: 0;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        padding: 24px 16px;
+        @include block-decor;
+        margin: 0 16px;
+    }
+
+    &__details-header {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    &__details-list {
+        @include list-reset;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px;
+        border-bottom: 1px solid $bg-middle-light-grey;
+
+    }
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        color: $font-color-secondary;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

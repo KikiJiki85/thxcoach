@@ -4,7 +4,7 @@
 @import "_scaffolding.scss";
 @import "_mixins.scss";
 
-
+@import "./blocks/btn.scss";
 @import "./blocks/page-header.scss";
 @import "./blocks/user-menu.scss";
 @import "./blocks/page-main.scss";
@@ -17,5 +17,6 @@
 @import "./blocks/goals.scss";
 @import "./blocks/schedule.scss";
 @import "./blocks/activity.scss";
-@import "./blocks/type-of-activity-modal.scss";
+@import "./blocks/pick-activity-modal.scss";
 @import "./blocks/activity-list.scss";
+@import "./blocks/activity-picked.scss";
