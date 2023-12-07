@@ -5,13 +5,16 @@
     right: 0;
     bottom: 0;
     min-width: 460px;
-
     background-color: $bg-main;
     display: flex;
     flex-direction: column;
     gap: 33px;
-    // transform: translateX(100%);
+    transform: translateX(100%);
     transition: all 0.5s;
+
+    &--show {
+        transform: translateX(0%);
+    }
 
     &__header-wrapper {
         display: flex;
@@ -91,15 +94,23 @@
 
     &__details-list {
         @include list-reset;
+        display: flex;
+        flex-direction: column;
+
     }
 
     &__item {
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        padding: 16px;
-        border-bottom: 1px solid $bg-middle-light-grey;
+        padding: 24px;
 
+        &:not(:nth-last-child(-n+2)) {
+            border-bottom: 1px solid $bg-middle-light-grey;
+        }
+
+        &:last-child {
+            padding-top: 8px;
+        }
     }
 
     &__label {
@@ -109,5 +120,27 @@
         cursor: pointer;
         font-size: 16px;
         line-height: 22px;
+    }
+
+    &__input {
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        font-size: 16px;
+        line-height: 22px;
+        display: none;
+
+    }
+
+    &__comment {
+        &::-webkit-input-placeholder {
+            color: $font-color-secondary;
+        }
+
+        display: flex;
+        border-radius: 32px;
+        border: 1px solid $bg-light-grey;
+        padding: 16px;
+        color: $font-color-secondary;
     }
 }
