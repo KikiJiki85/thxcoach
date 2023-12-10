@@ -1566,11 +1566,11 @@ img {
 
 .calendar-modal {
   position: absolute;
-  top: 69px;
-  left: 16px;
+  top: 165px;
+  right: 15px;
   background-color: #ffffff;
   padding: 16px;
-  z-index: 12;
+  z-index: 13;
   width: 428px;
   height: 394px;
   display: flex;
@@ -1587,12 +1587,12 @@ img {
 .calendar-modal__header {
   display: flex;
   align-items: center;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
 }
 .calendar-modal__header-text {
   margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
 }
 .calendar-modal__month {
   display: flex;

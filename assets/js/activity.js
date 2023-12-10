@@ -33,10 +33,12 @@ const activityPick = () => {
 
     activityPickedCalendar.addEventListener('click', () => {
         calendarModal.classList.add('calendar-modal--show');
+        document.querySelector('.overlay').style.zIndex = '12';
     });
 
     calendarModalClose.addEventListener('click', () => {
         calendarModal.classList.remove('calendar-modal--show');
+        document.querySelector('.overlay').style.zIndex = '';
     });
 
 };
