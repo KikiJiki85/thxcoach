@@ -11,14 +11,20 @@
     line-height: 22px;
     cursor: pointer;
     border: none;
-
     transition: opacity 0.5s;
+
+    &--white {
+        background-color: $bg-main;
+        color: $font-color-primary;
+        border: 1px solid $bg-dark-grey;
+    }
 
     @media (hover: hover) {
         &:hover {
             opacity: 0.8;
         }
     }
+
 
     &__close {
         width: 40px;
@@ -39,4 +45,18 @@
             }
         }
     }
+
+    &__range {
+        border-radius: 24px;
+        background: $bg-super-light-grey;
+        display: flex;
+        width: 62px;
+        height: 22px;
+        padding: 0px 16px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+    }
+
 }

@@ -445,6 +445,23 @@ input[type=radio].visually-hidden {
   opacity: 1;
 }
 
+.overlay2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(36, 36, 36, 0.05);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 12;
+  transition: opacity 0.5s;
+}
+.overlay2--show {
+  visibility: visible;
+  opacity: 1;
+}
+
 .container {
   position: relative;
   overflow: hidden;
@@ -475,6 +492,11 @@ img {
   border: none;
   transition: opacity 0.5s;
 }
+.btn--white {
+  background-color: #ffffff;
+  color: #293133;
+  border: 1px solid #293133;
+}
 @media (hover: hover) {
   .btn:hover {
     opacity: 0.8;
@@ -497,6 +519,18 @@ img {
   .btn__close:hover {
     opacity: 0.8;
   }
+}
+.btn__range {
+  border-radius: 24px;
+  background: #F8F8F8;
+  display: flex;
+  width: 62px;
+  height: 22px;
+  padding: 0px 16px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
 }
 
 .page-header {
@@ -921,7 +955,7 @@ img {
   }
 }
 .services--disabled {
-  background-color: #FBFBFB;
+  background-color: #F8F8F8;
   border-radius: 24px;
   transition: all 0.5s;
 }
@@ -1133,7 +1167,7 @@ img {
   display: flex;
   flex-direction: column;
   border-radius: 24px;
-  background-color: #FBFBFB;
+  background-color: #F8F8F8;
   padding: 4px 8px;
   gap: 4px;
   min-height: 114px;
@@ -1659,4 +1693,61 @@ img {
 .calendar-modal__day--picked {
   background-color: #BFFF00;
   border-radius: 16px;
+}
+
+.distance-modal {
+  width: 300px;
+  height: 328px;
+  position: absolute;
+  padding: 16px;
+  top: 445px;
+  right: 80px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  transition: all 0.5s;
+  z-index: 12;
+  transform: translateX(130%);
+}
+.distance-modal--show {
+  transform: translateX(0%);
+}
+.distance-modal__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.distance-modal__header-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+}
+.distance-modal__text {
+  margin: 0;
+}
+.distance-modal__pick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.distance-modal__kilometers, .distance-modal__meters {
+  width: 50%;
+  display: flex;
+  gap: 11px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.distance-modal__km-value, .distance-modal__m-value {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+}
+.distance-modal__confirm {
+  margin-top: 12px;
 }/*# sourceMappingURL=style.css.map */
