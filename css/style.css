@@ -512,12 +512,14 @@ img {
   border-radius: 50%;
   margin-left: auto;
   cursor: pointer;
-  transition: opacity 0.5s;
-  background-color: #F2F2F2;
+  background-color: transparent;
+}
+.btn__close--path {
+  transition: all 0.5s;
 }
 @media (hover: hover) {
-  .btn__close:hover {
-    opacity: 0.8;
+  .btn__close:hover .btn__close--path {
+    fill-opacity: 1;
   }
 }
 .btn__range {
@@ -1430,6 +1432,9 @@ img {
   margin-right: 16px;
   margin-left: 16px;
 }
+.pick-activity-modal__close {
+  background-color: #F2F2F2;
+}
 
 .activity-list__wrapper {
   display: flex;
@@ -1695,11 +1700,11 @@ img {
   border-radius: 16px;
 }
 
-.distance-modal {
+.mini-modal {
   width: 300px;
   height: 328px;
   position: absolute;
-  padding: 16px;
+  padding: 16px 0;
   top: 445px;
   right: 80px;
   background-color: #ffffff;
@@ -1712,42 +1717,52 @@ img {
   z-index: 12;
   transform: translateX(130%);
 }
-.distance-modal--show {
+.mini-modal--show {
   transform: translateX(0%);
 }
-.distance-modal__header {
+.mini-modal__header {
   display: flex;
   align-items: center;
   margin-bottom: 4px;
+  padding: 0 16px;
 }
-.distance-modal__header-text {
+.mini-modal__header-text {
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
   margin: 0;
 }
-.distance-modal__text {
+.mini-modal__text {
   margin: 0;
 }
-.distance-modal__pick {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.mini-modal__pick {
+  display: grid;
 }
-.distance-modal__kilometers, .distance-modal__meters {
-  width: 50%;
+.mini-modal__col-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.mini-modal__col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.mini-modal__col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.mini-modal__col {
   display: flex;
   gap: 11px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.distance-modal__km-value, .distance-modal__m-value {
+.mini-modal__value {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   margin: 0;
 }
-.distance-modal__confirm {
-  margin-top: 12px;
+.mini-modal__confirm {
+  margin: 12px 16px 0 16px;
+}
+.mini-modal__cancel {
+  margin: 0 16px;
 }/*# sourceMappingURL=style.css.map */

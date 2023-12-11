@@ -1,8 +1,8 @@
-.distance-modal {
+.mini-modal {
     width: 300px;
     height: 328px;
     position: absolute;
-    padding: 16px;
+    padding: 16px 0;
     top: 445px;
     right: 80px;
     background-color: $bg-main;
@@ -23,6 +23,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 4px;
+        padding: 0 16px;
     }
 
     &__header-text {
@@ -37,14 +38,22 @@
     }
 
     &__pick {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
     }
 
-    &__kilometers,
-    &__meters {
-        width: 50%;
+    &__col-1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__col-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__col {
         display: flex;
         gap: 11px;
         flex-direction: column;
@@ -52,8 +61,7 @@
         justify-content: center;
     }
 
-    &__km-value,
-    &__m-value {
+    &__value {
         font-size: 16px;
         font-weight: 400;
         line-height: 22px;
@@ -61,7 +69,11 @@
     }
 
     &__confirm {
-        margin-top: 12px;
+        margin: 12px 16px 0 16px;
+    }
+
+    &__cancel {
+        margin: 0 16px;
     }
 
 }
