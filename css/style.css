@@ -1808,6 +1808,7 @@ img {
 }
 @media (max-width: 418px) {
   .mini-modal--show {
-    right: 32px;
+    right: 50%;
+    transform: translateX(50%);
   }
 }/*# sourceMappingURL=style.css.map */
