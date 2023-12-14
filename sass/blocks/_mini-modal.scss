@@ -4,7 +4,7 @@
     position: absolute;
     padding: 16px 0;
     top: 445px;
-    right: 80px;
+    right: -380px;
     background-color: $bg-main;
     border-radius: 24px;
     box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.40);
@@ -13,10 +13,10 @@
     gap: 9px;
     transition: all 0.5s;
     z-index: 12;
-    transform: translateX(130%);
 
     &--show {
-        transform: translateX(0%);
+        // transform: translateX(0%);
+        right: 80px;
     }
 
     &__header {
@@ -79,18 +79,18 @@
 }
 
 
-@media (max-width: 428px) {
+@media (max-width: 767px) {
     .mini-modal {
         &--show {
-            transform: translateX(6%);
+            right: 60px;
         }
     }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 418px) {
     .mini-modal {
         &--show {
-            transform: translateX(17%);
+            right: 32px;
         }
     }
 }
