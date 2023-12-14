@@ -111,3 +111,16 @@
         }
     }
 }
+
+
+@media (max-width: 767px) {
+    .calendar-modal {
+        width: 396px;
+    }
+}
+
+@media (max-width: 428px) {
+    .calendar-modal {
+        width: calc(100% - 32px);
+    }
+}

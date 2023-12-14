@@ -51,3 +51,23 @@
         background-color: $bg-middle-light-grey;
     }
 }
+
+@media (max-width: 767px) {
+    .pick-activity-modal {
+        min-width: 428px;
+    }
+}
+
+@media (max-width: 428px) {
+    .pick-activity-modal {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .pick-activity-modal {
+        &__header {
+            margin-left: 96px;
+        }
+    }
+}

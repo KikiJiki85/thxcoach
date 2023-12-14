@@ -77,3 +77,20 @@
     }
 
 }
+
+
+@media (max-width: 428px) {
+    .mini-modal {
+        &--show {
+            transform: translateX(6%);
+        }
+    }
+}
+
+@media (max-width: 415px) {
+    .mini-modal {
+        &--show {
+            transform: translateX(17%);
+        }
+    }
+}

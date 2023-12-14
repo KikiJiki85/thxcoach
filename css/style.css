@@ -1436,6 +1436,21 @@ img {
   background-color: #F2F2F2;
 }
 
+@media (max-width: 767px) {
+  .pick-activity-modal {
+    min-width: 428px;
+  }
+}
+@media (max-width: 428px) {
+  .pick-activity-modal {
+    min-width: 100%;
+  }
+}
+@media (max-width: 360px) {
+  .pick-activity-modal__header {
+    margin-left: 96px;
+  }
+}
 .activity-list__wrapper {
   display: flex;
   flex-direction: column;
@@ -1603,6 +1618,16 @@ img {
   color: rgba(80, 80, 80, 0.6);
 }
 
+@media (max-width: 767px) {
+  .activity-picked {
+    min-width: 428px;
+  }
+}
+@media (max-width: 428px) {
+  .activity-picked {
+    min-width: 100%;
+  }
+}
 .calendar-modal {
   position: absolute;
   top: 165px;
@@ -1700,6 +1725,16 @@ img {
   border-radius: 16px;
 }
 
+@media (max-width: 767px) {
+  .calendar-modal {
+    width: 396px;
+  }
+}
+@media (max-width: 428px) {
+  .calendar-modal {
+    width: calc(100% - 32px);
+  }
+}
 .mini-modal {
   width: 300px;
   height: 328px;
@@ -1765,4 +1800,15 @@ img {
 }
 .mini-modal__cancel {
   margin: 0 16px;
+}
+
+@media (max-width: 428px) {
+  .mini-modal--show {
+    transform: translateX(6%);
+  }
+}
+@media (max-width: 415px) {
+  .mini-modal--show {
+    transform: translateX(17%);
+  }
 }/*# sourceMappingURL=style.css.map */
