@@ -1235,8 +1235,6 @@ img {
   border-radius: 24px;
   background: #F8F8F8;
   cursor: pointer;
-}
-.schedule__add-activity:active {
   transform: scale(0.95);
 }
 .schedule__next-month-day {
@@ -1319,6 +1317,12 @@ img {
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
   min-height: 32px;
   max-height: 32px;
+  transition: all 0.5s;
+}
+@media (hover: hover) {
+  .activity:hover {
+    box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
+  }
 }
 .activity__header-wrapper {
   display: flex;
@@ -1546,10 +1550,6 @@ img {
     opacity: 0.8;
   }
 }
-.activity-picked__back svg, .activity-picked__calendar svg {
-  min-width: 19px;
-  min-height: 17px;
-}
 .activity-picked__btn {
   margin-right: 16px;
   margin-left: 16px;
@@ -1580,11 +1580,6 @@ img {
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
   transition: all 0.3s;
   margin: 0 16px;
-}
-@media (hover: hover) {
-  .activity-picked__details:not(.schedule):hover {
-    box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.6);
-  }
 }
 .activity-picked__details:has(.close-block:active) {
   transform: scale(0.95);
@@ -1622,6 +1617,12 @@ img {
   cursor: pointer;
   font-size: 16px;
   line-height: 22px;
+  transition: all 0.5s;
+}
+@media (hover: hover) {
+  .activity-picked__label:hover {
+    color: #293133;
+  }
 }
 .activity-picked__input {
   background-color: transparent;
@@ -1637,9 +1638,18 @@ img {
   border: 1px solid rgba(80, 80, 80, 0.3);
   padding: 16px;
   color: rgba(80, 80, 80, 0.6);
+  transition: all 0.5s;
 }
 .activity-picked__comment::-webkit-input-placeholder {
   color: rgba(80, 80, 80, 0.6);
+}
+.activity-picked__comment:focus {
+  border-color: #293133;
+  outline: #293133;
+}
+.activity-picked__calendar-icon {
+  min-width: 19px;
+  min-height: 17px;
 }
 
 @media (max-width: 767px) {

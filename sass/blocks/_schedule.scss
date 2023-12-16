@@ -82,6 +82,7 @@
                     display: flex;
                 }
             }
+
         }
     }
 
@@ -128,9 +129,7 @@
         background: #F8F8F8;
         cursor: pointer;
 
-        &:active {
-            transform: scale(0.95);
-        }
+        transform: scale(0.95);
     }
 
     &__next-month-day {
