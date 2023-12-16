@@ -1547,8 +1547,8 @@ img {
   }
 }
 .activity-picked__back svg, .activity-picked__calendar svg {
-  width: 19px;
-  height: 17px;
+  min-width: 19px;
+  min-height: 17px;
 }
 .activity-picked__btn {
   margin-right: 16px;
