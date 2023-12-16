@@ -877,7 +877,7 @@ img {
 }
 @media (max-width: 767px) {
   .main-content {
-    padding: 140px 16px 24px 16px;
+    padding: 116px 16px 24px 16px;
   }
 }
 .services {
@@ -1236,6 +1236,9 @@ img {
   background: #F8F8F8;
   cursor: pointer;
 }
+.schedule__add-activity:active {
+  transform: scale(0.95);
+}
 .schedule__next-month-day {
   opacity: 0.4;
   cursor: default;
@@ -1303,7 +1306,7 @@ img {
   }
   .schedule__add-activity {
     display: flex;
-    padding: 13px 16px;
+    padding: 17px 16px;
   }
 }
 .activity {
@@ -1542,6 +1545,10 @@ img {
   .activity-picked__back:hover, .activity-picked__calendar:hover {
     opacity: 0.8;
   }
+}
+.activity-picked__back svg, .activity-picked__calendar svg {
+  width: 19px;
+  height: 17px;
 }
 .activity-picked__btn {
   margin-right: 16px;
