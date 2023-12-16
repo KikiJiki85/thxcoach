@@ -1,4 +1,9 @@
 .side-menu {
+    position: fixed;
+    height: 100%;
+    z-index: 15;
+    bottom: 0;
+    top: 96px;
 
     &__navigation {
         display: flex;

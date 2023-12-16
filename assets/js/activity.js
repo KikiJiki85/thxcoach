@@ -1,4 +1,6 @@
 const activityPick = () => {
+    const body = document.querySelector('.page__body');
+
     const overlay = document.querySelector('.overlay');
     const overlay2 = document.querySelector('.overlay2');
     const scheduleCalendar = document.querySelector('.schedule__calendar');
@@ -38,12 +40,14 @@ const activityPick = () => {
         if (evt.target.classList.contains('schedule__add-activity') || evt.target.classList.contains('schedule__add-icon')) {
             activityModal.classList.toggle('pick-activity-modal--show');
             overlay.classList.toggle('overlay--show');
+            body.classList.add('no-scroll');
         }
     });
 
     activityModalClose.addEventListener('click', () => {
         activityModal.classList.toggle('pick-activity-modal--show');
         overlay.classList.toggle('overlay--show');
+        body.classList.remove('no-scroll');
     });
 
     activityModalContinue.addEventListener('click', () => {

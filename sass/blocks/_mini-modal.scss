@@ -1,9 +1,9 @@
 .mini-modal {
     width: 300px;
     height: 328px;
-    position: absolute;
+    position: fixed;
     padding: 16px 0;
-    top: 445px;
+    top: 35%;
     right: -380px;
     background-color: $bg-main;
     border-radius: 24px;
@@ -15,7 +15,6 @@
     z-index: 12;
 
     &--show {
-        // transform: translateX(0%);
         right: 80px;
     }
 

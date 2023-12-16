@@ -462,6 +462,10 @@ input[type=radio].visually-hidden {
   opacity: 1;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   position: relative;
   overflow: hidden;
@@ -536,6 +540,9 @@ img {
 }
 
 .page-header {
+  position: fixed;
+  width: 100vw;
+  z-index: 15;
   display: flex;
   justify-content: space-between;
   background-color: #BFFF00;
@@ -636,6 +643,13 @@ img {
   display: flex;
 }
 
+.side-menu {
+  position: fixed;
+  height: 100%;
+  z-index: 15;
+  bottom: 0;
+  top: 96px;
+}
 .side-menu__navigation {
   display: flex;
   flex-direction: column;
@@ -829,7 +843,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 32px;
+  padding: 128px 32px 32px 218px;
   background-color: #ffffff;
   width: 100%;
 }
@@ -1389,7 +1403,8 @@ img {
   }
 }
 .pick-activity-modal {
-  position: absolute;
+  position: fixed;
+  overflow-y: scroll;
   z-index: 10;
   top: 96px;
   right: 0;
@@ -1479,7 +1494,8 @@ img {
 }
 
 .activity-picked {
-  position: absolute;
+  position: fixed;
+  overflow-y: scroll;
   z-index: 11;
   top: 96px;
   right: 0;
@@ -1491,6 +1507,7 @@ img {
   gap: 33px;
   transform: translateX(100%);
   transition: all 0.5s;
+  padding-bottom: 18px;
 }
 .activity-picked--show {
   transform: translateX(0%);
@@ -1629,7 +1646,7 @@ img {
   }
 }
 .calendar-modal {
-  position: absolute;
+  position: fixed;
   top: 165px;
   right: 15px;
   background-color: #ffffff;
@@ -1738,9 +1755,9 @@ img {
 .mini-modal {
   width: 300px;
   height: 328px;
-  position: absolute;
+  position: fixed;
   padding: 16px 0;
-  top: 445px;
+  top: 35%;
   right: -380px;
   background-color: #ffffff;
   border-radius: 24px;
