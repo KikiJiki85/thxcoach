@@ -12,6 +12,7 @@
     gap: 33px;
     transform: translateX(100%);
     transition: all 0.5s;
+    padding-bottom: 24px;
 
     &--show {
         transform: translateX(0%);

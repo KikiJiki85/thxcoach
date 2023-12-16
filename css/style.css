@@ -702,7 +702,7 @@ img {
   height: 44px;
 }
 
-@media (max-width: 1035px) {
+@media (max-width: 992px) {
   .side-menu__navigation {
     gap: 0;
     padding: 32px 0;
@@ -724,7 +724,6 @@ img {
 @media (max-width: 767px) {
   .side-menu {
     transform: translateX(-45px);
-    position: absolute;
   }
 }
 .todays-training {
@@ -861,7 +860,7 @@ img {
 
 @media (max-width: 992px) {
   .main-content {
-    padding: 24px;
+    padding: 116px 24px 24px 66px;
     gap: 24px;
   }
 }
@@ -878,7 +877,7 @@ img {
 }
 @media (max-width: 767px) {
   .main-content {
-    padding: 24px 16px;
+    padding: 140px 16px 24px 16px;
   }
 }
 .services {
@@ -1416,6 +1415,7 @@ img {
   gap: 33px;
   transform: translateX(100%);
   transition: all 0.5s;
+  padding-bottom: 24px;
 }
 .pick-activity-modal--show {
   transform: translateX(0%);
@@ -1507,7 +1507,7 @@ img {
   gap: 33px;
   transform: translateX(100%);
   transition: all 0.5s;
-  padding-bottom: 18px;
+  padding-bottom: 32px;
 }
 .activity-picked--show {
   transform: translateX(0%);

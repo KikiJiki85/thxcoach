@@ -47,7 +47,7 @@
     }
 }
 
-@media (max-width: 1035px) {
+@media (max-width: 992px) {
     .side-menu {
         &__navigation {
             gap: 0;
@@ -76,7 +76,6 @@
 @media (max-width: 767px) {
     .side-menu {
         transform: translateX(-45px);
-        position: absolute;
     }
 
 }
