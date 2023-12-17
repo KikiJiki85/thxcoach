@@ -1,0 +1,234 @@
+.view-activity {
+    position: fixed;
+    overflow-y: scroll;
+    z-index: 11;
+    top: 96px;
+    right: 0;
+    bottom: 0;
+    min-width: 460px;
+    background-color: $bg-main;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    transform: translateX(100%);
+    transition: all 0.5s;
+    padding-bottom: 32px;
+
+    &--show {
+        transform: translateX(0%);
+    }
+
+    &__header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 16px;
+        border-bottom: 1px solid $bg-middle-light-grey;
+        position: relative;
+    }
+
+    &__header {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-left: 24px;
+    }
+
+    &__calendar,
+    &__edit {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: opacity 0.5s;
+        background-color: $bg-middle-light-grey;
+
+        @media (hover: hover) {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__edit {
+        margin-left: 8px;
+    }
+
+    &__btn {
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+
+    &__middle-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 0 16px;
+    }
+
+    &__middle-img {
+        width: 48px;
+        height: 48px;
+    }
+
+    &__middle-text {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+        margin: 0;
+    }
+
+    &__middle-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    &__middle-text-small {
+        margin: 0;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        padding: 24px 16px 16px 16px;
+
+        @include block-decor-no-hover;
+
+        margin: 0 16px;
+    }
+
+    &__details-header {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+
+    &__calendar-icon {
+        min-width: 19px;
+        min-height: 17px;
+    }
+
+    &__close {
+        background-color: $bg-middle-light-grey;
+    }
+
+    &__filter {
+        border-radius: 20px;
+        background: $bg-middle-light-grey;
+        min-height: 42px;
+        display: flex;
+        justify-content: space-between;
+        padding: 2px;
+    }
+
+    &__data-list {
+        @include list-reset;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 24px;
+    }
+
+    &__data-item {
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        &:not(:nth-child(3n - 3)) {
+            border-right: 1px solid #5050504D;
+        }
+    }
+
+    &__training {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    &__stats-header {
+        color: $font-color-secondary;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    &__stats-text {
+        color: $font-color-tertiary;
+        font-weight: 500;
+    }
+
+    &__bottom-wrapper {
+        padding: 0 16px;
+    }
+
+    &__bottom-header {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    &__bottom-small {
+        margin: 0;
+    }
+
+    &__send-message {
+        display: flex;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    &__comment {
+        &::-webkit-input-placeholder {
+            color: $font-color-secondary;
+        }
+
+        display: flex;
+        flex-grow: 1;
+        border-radius: 32px;
+        border: 1px solid $bg-light-grey;
+        padding: 16px;
+        color: $font-color-secondary;
+        transition: all 0.5s;
+
+        &:focus {
+            border-color: $bg-dark-grey;
+            outline: $bg-dark-grey;
+        }
+    }
+
+    &__send-comment {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: none;
+        background-color: #5050504D;
+        cursor: pointer;
+
+    }
+}
+
+
+@media (max-width: 767px) {
+    .view-activity {
+        min-width: 428px;
+    }
+}
+
+@media (max-width: 428px) {
+    .view-activity {
+        min-width: 100%;
+    }
+}

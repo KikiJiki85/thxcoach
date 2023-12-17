@@ -35,10 +35,23 @@ const activityPick = () => {
     const elevationModal = document.querySelector('.elevation-modal');
     const elevationModalClose = document.querySelector('.elevation-modal__close');
 
+    const viewActivityModal = document.querySelector('.view-activity');
+    const viewActivityModalClose = document.querySelector('.view-activity__close');
+
 
     scheduleCalendar.addEventListener('click', (evt) => {
         if (evt.target.classList.contains('schedule__add-activity') || evt.target.classList.contains('schedule__add-icon')) {
             activityModal.classList.toggle('pick-activity-modal--show');
+            overlay.classList.toggle('overlay--show');
+            body.classList.add('no-scroll');
+        }
+        console.log(evt.target)
+        if (evt.target.classList.contains('activity__header-wrapper') ||
+            evt.target.classList.contains('activity__done') ||
+            evt.target.classList.contains('activity__name') ||
+            evt.target.classList.contains('activity__icon') ||
+            evt.target.classList.contains('activity__stats')) {
+            viewActivityModal.classList.toggle('view-activity--show');
             overlay.classList.toggle('overlay--show');
             body.classList.add('no-scroll');
         }
@@ -116,6 +129,12 @@ const activityPick = () => {
     elevationModalClose.addEventListener('click', () => {
         elevationModal.classList.remove('mini-modal--show');
         overlay2.classList.remove('overlay2--show');
+    });
+
+    viewActivityModalClose.addEventListener('click', () => {
+        viewActivityModal.classList.remove('view-activity--show');
+        overlay.classList.remove('overlay--show');
+        body.classList.remove('no-scroll');
     });
 
 };
