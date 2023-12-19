@@ -20,7 +20,7 @@
 
     &__header-wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         padding: 18px 16px;
         border-bottom: 1px solid $bg-middle-light-grey;
@@ -31,7 +31,7 @@
         font-size: 18px;
         font-weight: 600;
         line-height: 24px;
-        margin-left: 124px;
+        // margin-left: 124px;
     }
 
     &__list {
@@ -51,6 +51,12 @@
 
     &__close {
         background-color: $bg-middle-light-grey;
+    }
+
+    &__crutch {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
     }
 }
 

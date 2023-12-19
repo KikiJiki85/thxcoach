@@ -32,10 +32,8 @@
         font-size: 18px;
         font-weight: 600;
         line-height: 24px;
-        margin-left: 24px;
     }
 
-    &__calendar,
     &__edit {
         width: 40px;
         height: 40px;
@@ -55,13 +53,15 @@
         }
     }
 
-    &__edit {
-        margin-left: 8px;
-    }
-
     &__btn {
         margin-right: 16px;
         margin-left: 16px;
+    }
+
+    &__btn-delete {
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: -9px;
     }
 
     &__middle-wrapper {
@@ -167,7 +167,10 @@
     }
 
     &__bottom-wrapper {
-        padding: 0 16px;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid $bg-light-grey;
     }
 
     &__bottom-header {

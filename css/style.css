@@ -494,15 +494,26 @@ img {
   line-height: 22px;
   cursor: pointer;
   border: none;
-  transition: opacity 0.5s;
+  transition: all 0.5s;
 }
 .btn--white {
   background-color: #ffffff;
   color: #293133;
   border: 1px solid #293133;
 }
+.btn--red {
+  color: #E32636;
+  background-color: transparent;
+  border: 1px solid #E32636;
+}
 @media (hover: hover) {
-  .btn:hover {
+  .btn--red:hover {
+    color: #ffffff;
+    background-color: #E32636;
+  }
+}
+@media (hover: hover) {
+  .btn:hover:not(.btn--red) {
     opacity: 0.8;
   }
 }
@@ -514,7 +525,6 @@ img {
   justify-content: center;
   border: none;
   border-radius: 50%;
-  margin-left: auto;
   cursor: pointer;
   background-color: transparent;
 }
@@ -1448,7 +1458,7 @@ img {
 }
 .pick-activity-modal__header-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 18px 16px;
   border-bottom: 1px solid #F2F2F2;
@@ -1458,7 +1468,6 @@ img {
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
-  margin-left: 124px;
 }
 .pick-activity-modal__list {
   display: grid;
@@ -1475,6 +1484,11 @@ img {
 }
 .pick-activity-modal__close {
   background-color: #F2F2F2;
+}
+.pick-activity-modal__crutch {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
 }
 
 @media (max-width: 767px) {
@@ -1704,6 +1718,7 @@ img {
 .calendar-modal__header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .calendar-modal__header-text {
   margin: 0;
@@ -1809,6 +1824,7 @@ img {
 }
 .mini-modal__header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 4px;
   padding: 0 16px;
@@ -1897,9 +1913,8 @@ img {
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
-  margin-left: 24px;
 }
-.view-activity__calendar, .view-activity__edit {
+.view-activity__edit {
   width: 40px;
   height: 40px;
   display: flex;
@@ -1912,16 +1927,18 @@ img {
   background-color: #F2F2F2;
 }
 @media (hover: hover) {
-  .view-activity__calendar:hover, .view-activity__edit:hover {
+  .view-activity__edit:hover {
     opacity: 0.8;
   }
-}
-.view-activity__edit {
-  margin-left: 8px;
 }
 .view-activity__btn {
   margin-right: 16px;
   margin-left: 16px;
+}
+.view-activity__btn-delete {
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: -9px;
 }
 .view-activity__middle-wrapper {
   display: flex;
@@ -2015,7 +2032,10 @@ img {
   font-weight: 500;
 }
 .view-activity__bottom-wrapper {
-  padding: 0 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(80, 80, 80, 0.3);
 }
 .view-activity__bottom-header {
   margin: 0;
