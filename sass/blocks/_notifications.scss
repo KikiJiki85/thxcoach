@@ -52,6 +52,11 @@
         }
     }
 
+    &__edit-icon {
+        width: 24px;
+        height: 19px;
+    }
+
     &__content-wrapper {
         display: flex;
         flex-direction: column;
@@ -138,6 +143,10 @@
 
     &__icon {
         display: none;
+    }
+
+    &__close {
+        background-color: $bg-middle-light-grey;
     }
 }
 

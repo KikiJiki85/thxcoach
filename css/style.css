@@ -2145,6 +2145,10 @@ img {
     opacity: 0.8;
   }
 }
+.notifications__edit-icon {
+  width: 24px;
+  height: 19px;
+}
 .notifications__content-wrapper {
   display: flex;
   flex-direction: column;
@@ -2226,6 +2230,9 @@ img {
 }
 .notifications__icon {
   display: none;
+}
+.notifications__close {
+  background-color: #F2F2F2;
 }
 
 @media (max-width: 767px) {
