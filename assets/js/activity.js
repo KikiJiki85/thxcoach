@@ -3,6 +3,7 @@ const activityPick = () => {
 
     const overlay = document.querySelector('.overlay');
     const overlay2 = document.querySelector('.overlay2');
+    const notifyButton = document.querySelector('.user-menu__notify');
     const scheduleCalendar = document.querySelector('.schedule__calendar');
     const activityModal = document.querySelector('.pick-activity-modal');
     const activityModalClose = document.querySelector('.pick-activity-modal__close');
@@ -37,6 +38,12 @@ const activityPick = () => {
 
     const viewActivityModal = document.querySelector('.view-activity');
     const viewActivityModalClose = document.querySelector('.view-activity__close');
+
+    const notifications = document.querySelector('.notifications');
+    const notificationsClose = document.querySelector('.notifications__close');
+    const notificationsEdit = document.querySelector('.notifications__edit');
+    const notificationsModal = document.querySelector('.notifications-modal');
+    const notificationsModalClose = document.querySelector('.notifications-modal__close');
 
 
     scheduleCalendar.addEventListener('click', (evt) => {
@@ -135,6 +142,28 @@ const activityPick = () => {
         viewActivityModal.classList.remove('view-activity--show');
         overlay.classList.remove('overlay--show');
         body.classList.remove('no-scroll');
+    });
+
+    notifyButton.addEventListener('click', () => {
+        notifications.classList.add('notifications--show');
+        overlay.classList.add('overlay--show');
+        body.classList.add('no-scroll');
+    });
+
+    notificationsClose.addEventListener('click', () => {
+        notifications.classList.remove('notifications--show');
+        overlay.classList.remove('overlay--show');
+        body.classList.remove('no-scroll');
+    });
+
+    notificationsEdit.addEventListener('click', () => {
+        notificationsModal.classList.add('mini-modal--show');
+        overlay2.classList.add('overlay2--show');
+    });
+
+    notificationsModalClose.addEventListener('click', () => {
+        notificationsModal.classList.remove('mini-modal--show');
+        overlay2.classList.remove('overlay2--show');
     });
 
 };
