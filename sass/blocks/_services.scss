@@ -39,7 +39,8 @@
     }
 
     &__find-coach,
-    &__coach-service {
+    &__coach-service,
+    &__verify-email {
         gap: 8px;
     }
 
@@ -53,8 +54,13 @@
     }
 
     &__find-coach,
-    &__coach-service {
+    &__coach-service,
+    &__verify-email {
         flex-direction: column;
+    }
+
+    &__verify-email {
+        cursor: pointer;
     }
 
     &__connect-watch-close,

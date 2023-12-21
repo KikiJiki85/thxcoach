@@ -89,6 +89,10 @@
             <section class="main-content">
                 <h2 class="visually-hidden">Planning athlete activities</h2>
                 <div class="main-content__services services">
+                    <div class="services__item services__verify-email services--disabled">
+                        <h3 class="services__header">Verify your email address</h3>
+                        <p class="services__text">We have sent you an email with instructions. Please verify your email address.</p>
+                    </div>
                     <div class="services__item services__connect-watch">
                         <svg xmlns="http://www.w3.org/2000/svg" width="79" height="63" viewBox="0 0 79 63" fill="none">
                             <g clip-path="url(#clip0_2260_5074)">
@@ -121,7 +125,7 @@
                             </svg>
                         </span>
                     </div>
-                    <div class="services__item services__coach-service services--disabled">
+                    <div class="services__item services__coach-service services--disabled visually-hidden">
                         <h3 class="services__header">Coach service</h3>
                         <p class="services__text">Must be paid for coach service until December 25</p>
                     </div>
@@ -1214,6 +1218,7 @@
             </div>
             <button class="pick-activity-modal__continue btn">Continue</button>
         </div>
+
         <div class="activity-picked">
             <div class="activity-picked__header-wrapper">
                 <button class="activity-picked__back">
@@ -1581,7 +1586,7 @@
         <div class="view-activity">
             <div class="view-activity__header-wrapper">
                 <button class="view-activity__edit">
-                    <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="view-activity__edit-icon" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.18271 16.5586C0.79599 16.5586 0.664154 16.207 0.927826 15.9346L2.14072 14.6514C1.81552 14.3174 1.77158 13.8867 1.95615 13.4561L3.18661 10.5381C3.27451 10.3184 3.35361 10.2217 3.48544 10.0986L11.9054 1.74902C12.7315 0.931641 13.6895 0.949219 14.5333 1.78418L16.379 3.64746C17.214 4.49121 17.2227 5.44922 16.3966 6.2666L7.98544 14.6162C7.85361 14.748 7.74814 14.8271 7.52841 14.915L4.61044 16.1191C4.1622 16.3125 3.72275 16.251 3.39755 15.9258L3.37997 15.9082L2.79111 16.3564C2.59775 16.5146 2.49228 16.5586 2.24619 16.5586H1.18271ZM12.7931 2.7334L12.1339 3.39258L14.753 6.0293L15.4122 5.37891C15.6583 5.13281 15.6759 4.83398 15.4386 4.58789L13.5841 2.71582C13.3468 2.47852 13.0479 2.49609 12.7931 2.7334ZM4.84775 10.626L7.46689 13.2627L13.9268 6.84668L11.3077 4.20996L4.84775 10.626ZM4.47861 14.7568L6.47372 13.9219L4.17978 11.6104L3.32724 13.6055C3.25693 13.7637 3.25693 13.9043 3.41513 14.0625L4.01279 14.6602C4.17099 14.8184 4.30283 14.8184 4.47861 14.7568ZM1.00693 19.6963C0.620209 19.6963 0.303802 19.3711 0.303802 18.9844C0.303802 18.5977 0.620209 18.2812 1.00693 18.2812H17.8028C18.1895 18.2812 18.5147 18.5977 18.5147 18.9844C18.5147 19.3711 18.1895 19.6963 17.8028 19.6963H1.00693Z" fill="#293133"/>
                         </svg>
                 </button>
@@ -1693,7 +1698,7 @@
                                 Congratulations!
                             </p>
                             <p class="notifications__time-passed">1 hour ago</p>
-                            <img class="notifications__badge" src="./assets/img/cycling-50km-badge.svg" alt="Cycling badge">
+                            <img class="notifications__badge" src="./assets/img/running-42km-badge.svg" alt="Running badge">
                         </div>
                         <img class="notifications__icon" src="./assets/img/notification-icon.svg" alt="Notification">
                     </li>
@@ -1801,6 +1806,23 @@
             </div>
             <button class="mini-modal__clear btn">Clear</button>
             <button class="mini-modal__cancel btn btn--white">Cancel</button>
+        </div>
+
+        <div class="email-confirmation">
+            <div class="email-confirmation__header-wrapper">
+                <div class="email-confirmation__crutch"></div>
+                <h2 class="email-confirmation__header">Email confirmation</h2>
+                <button class="email-confirmation__close btn__close">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.66806 14.4043C0.360443 14.1055 0.369232 13.5957 0.66806 13.2969L6.29306 7.66309L0.66806 2.03809C0.369232 1.73926 0.369232 1.23828 0.66806 0.930664C0.966888 0.614258 1.48544 0.623047 1.78427 0.930664L7.40927 6.55566L13.0343 0.930664C13.3331 0.623047 13.8429 0.623047 14.1505 0.930664C14.4581 1.22949 14.4493 1.73926 14.1505 2.03809L8.52548 7.66309L14.1505 13.2969C14.4493 13.5957 14.4493 14.0967 14.1505 14.4043C13.8517 14.7119 13.3331 14.7031 13.0343 14.4043L7.40927 8.7793L1.78427 14.4043C1.48544 14.7031 0.975677 14.7031 0.66806 14.4043Z" fill="#293133"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="email-confirmation__main-content">
+                <p class="email-confirmation__main-header">Email confirmation letter</p>
+                <p class="email-confirmation__text">Confirmation instructions were sent to email <span class="email-confirmation__highlight">ivan.fanda@thankscoach.fi</span></p>
+            </div>
+            <button class="email-confirmation__resend btn">Resend</button>
         </div>
 
         <script type="module" src="assets/js/index.js"></script>

@@ -950,7 +950,7 @@ img {
 .services__connect-watch {
   gap: 16px;
 }
-.services__find-coach, .services__coach-service {
+.services__find-coach, .services__coach-service, .services__verify-email {
   gap: 8px;
 }
 .services__connect-watch {
@@ -982,8 +982,11 @@ img {
 .services__find-coach:has(.close-block:active) {
   transform: scale(0.95);
 }
-.services__find-coach, .services__coach-service {
+.services__find-coach, .services__coach-service, .services__verify-email {
   flex-direction: column;
+}
+.services__verify-email {
+  cursor: pointer;
 }
 .services__connect-watch-close, .services__find-coach-close {
   display: flex;
@@ -1508,11 +1511,6 @@ img {
     min-width: 100%;
   }
 }
-@media (max-width: 360px) {
-  .pick-activity-modal__header {
-    margin-left: 96px;
-  }
-}
 .activity-list__wrapper {
   display: flex;
   flex-direction: column;
@@ -1938,6 +1936,10 @@ img {
     opacity: 0.8;
   }
 }
+.view-activity__edit-icon {
+  min-width: 19px;
+  min-height: 20px;
+}
 .view-activity__btn {
   margin-right: 16px;
   margin-left: 16px;
@@ -2146,8 +2148,8 @@ img {
   }
 }
 .notifications__edit-icon {
-  width: 24px;
-  height: 19px;
+  min-width: 24px;
+  min-height: 19px;
 }
 .notifications__content-wrapper {
   display: flex;
@@ -2251,4 +2253,82 @@ img {
 .notifications-modal__text {
   padding-left: 16px;
   padding-right: 16px;
+}
+
+.email-confirmation {
+  position: fixed;
+  overflow-y: scroll;
+  z-index: 10;
+  top: 96px;
+  right: 0;
+  bottom: 0;
+  min-width: 460px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  transform: translateX(100%);
+  transition: all 0.5s;
+  padding-bottom: 24px;
+}
+.email-confirmation--show {
+  transform: translateX(0%);
+}
+.email-confirmation__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 16px;
+  border-bottom: 1px solid #F2F2F2;
+}
+.email-confirmation__header {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.email-confirmation__resend {
+  margin-right: 16px;
+  margin-left: 16px;
+  margin-top: -9px;
+}
+.email-confirmation__close {
+  background-color: #F2F2F2;
+}
+.email-confirmation__crutch {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+.email-confirmation__main-content {
+  max-width: 460px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.email-confirmation__main-header {
+  margin: 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+.email-confirmation__text {
+  margin: 0;
+}
+.email-confirmation__highlight {
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .email-confirmation {
+    min-width: 428px;
+  }
+}
+@media (max-width: 428px) {
+  .email-confirmation {
+    min-width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

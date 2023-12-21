@@ -53,8 +53,8 @@
     }
 
     &__edit-icon {
-        width: 24px;
-        height: 19px;
+        min-width: 24px;
+        min-height: 19px;
     }
 
     &__content-wrapper {

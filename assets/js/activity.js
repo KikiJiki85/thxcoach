@@ -45,6 +45,10 @@ const activityPick = () => {
     const notificationsModal = document.querySelector('.notifications-modal');
     const notificationsModalClose = document.querySelector('.notifications-modal__close');
 
+    const servicesVerifyEmail = document.querySelector('.services__verify-email');
+    const emailConfirmation = document.querySelector('.email-confirmation');
+    const emailConfirmationClose = document.querySelector('.email-confirmation__close');
+
 
     scheduleCalendar.addEventListener('click', (evt) => {
         if (evt.target.classList.contains('schedule__add-activity') || evt.target.classList.contains('schedule__add-icon')) {
@@ -164,6 +168,18 @@ const activityPick = () => {
     notificationsModalClose.addEventListener('click', () => {
         notificationsModal.classList.remove('mini-modal--show');
         overlay2.classList.remove('overlay2--show');
+    });
+
+    servicesVerifyEmail.addEventListener('click', () => {
+        emailConfirmation.classList.add('email-confirmation--show');
+        overlay.classList.add('overlay--show');
+        body.classList.add('no-scroll');
+    });
+
+    emailConfirmationClose.addEventListener('click', () => {
+        emailConfirmation.classList.remove('email-confirmation--show');
+        overlay.classList.remove('overlay--show');
+        body.classList.remove('no-scroll');
     });
 
 };

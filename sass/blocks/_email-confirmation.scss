@@ -1,4 +1,4 @@
-.pick-activity-modal {
+.email-confirmation {
     position: fixed;
     overflow-y: scroll;
     z-index: 10;
@@ -33,19 +33,11 @@
         line-height: 24px;
     }
 
-    &__list {
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 32px;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
 
-    &__continue {
+    &__resend {
         margin-right: 16px;
         margin-left: 16px;
+        margin-top: -9px;
     }
 
     &__close {
@@ -57,16 +49,41 @@
         height: 40px;
         background-color: transparent;
     }
+
+    &__main-content {
+        max-width: 460px;
+        padding-left: 16px;
+        padding-right: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__main-header {
+        margin: 0;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+    &__highlight {
+        font-weight: 600;
+    }
 }
 
 @media (max-width: 767px) {
-    .pick-activity-modal {
+    .email-confirmation {
         min-width: 428px;
     }
 }
 
 @media (max-width: 428px) {
-    .pick-activity-modal {
+    .email-confirmation {
         min-width: 100%;
     }
 }
