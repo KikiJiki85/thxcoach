@@ -959,6 +959,7 @@ img {
   border-radius: 24px;
   box-shadow: 0px 0px 30px 0px rgba(193, 193, 193, 0.4);
   transition: all 0.3s;
+  cursor: pointer;
 }
 @media (hover: hover) {
   .services__connect-watch:not(.schedule):hover {
@@ -2262,7 +2263,7 @@ img {
   top: 96px;
   right: 0;
   bottom: 0;
-  min-width: 460px;
+  max-width: 460px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -2320,6 +2321,81 @@ img {
 }
 .email-confirmation__highlight {
   font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .email-confirmation {
+    min-width: 428px;
+  }
+}
+@media (max-width: 428px) {
+  .email-confirmation {
+    min-width: 100%;
+  }
+}
+.connect-watch {
+  position: fixed;
+  overflow-y: scroll;
+  z-index: 10;
+  top: 96px;
+  right: 0;
+  bottom: 0;
+  max-width: 460px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: all 0.5s;
+  padding-bottom: 24px;
+}
+.connect-watch--show {
+  transform: translateX(0%);
+}
+.connect-watch__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 16px;
+  border-bottom: 1px solid #F2F2F2;
+}
+.connect-watch__header {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.connect-watch__close {
+  background-color: #F2F2F2;
+}
+.connect-watch__crutch {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+.connect-watch__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px 0;
+  margin: 0 16px;
+  border-bottom: 1px solid #F2F2F2;
+}
+.connect-watch__strava {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  gap: 16px;
+}
+.connect-watch__strava-header {
+  margin: 0;
+  text-align: center;
 }
 
 @media (max-width: 767px) {

@@ -111,7 +111,7 @@
                             <p class="services__text">Results of trainings will be uploaded automatically</p>
                         </div>
                         <span class="services__connect-watch-close close-block">
-                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="services__icon-close" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path class="services__close-icon close-icon" d="M0.928955 0.758788C1.22778 0.451171 1.73755 0.45996 2.03638 0.758788L7.67017 6.38379L13.2952 0.758789C13.594 0.459961 14.095 0.459961 14.4026 0.758789C14.719 1.05762 14.7102 1.57617 14.4026 1.875L8.77759 7.5L14.4026 13.125C14.7102 13.4238 14.7102 13.9336 14.4026 14.2412C14.1038 14.5488 13.594 14.54 13.2952 14.2412L7.67017 8.61621L2.03638 14.2412C1.73755 14.54 1.23657 14.54 0.928954 14.2412C0.621337 13.9424 0.630126 13.4238 0.928954 13.125L6.55395 7.5L0.928955 1.875C0.630127 1.57617 0.630127 1.06641 0.928955 0.758788Z" fill="#505050" fill-opacity="0.3"/>
                             </svg>
                         </span>
@@ -1823,6 +1823,51 @@
                 <p class="email-confirmation__text">Confirmation instructions were sent to email <span class="email-confirmation__highlight">ivan.fanda@thankscoach.fi</span></p>
             </div>
             <button class="email-confirmation__resend btn">Resend</button>
+        </div>
+
+        <div class="connect-watch">
+            <div class="connect-watch__header-wrapper">
+                <div class="connect-watch__crutch"></div>
+                <h2 class="connect-watch__header">Connecting the watch</h2>
+                <button class="connect-watch__close btn__close">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.66806 14.4043C0.360443 14.1055 0.369232 13.5957 0.66806 13.2969L6.29306 7.66309L0.66806 2.03809C0.369232 1.73926 0.369232 1.23828 0.66806 0.930664C0.966888 0.614258 1.48544 0.623047 1.78427 0.930664L7.40927 6.55566L13.0343 0.930664C13.3331 0.623047 13.8429 0.623047 14.1505 0.930664C14.4581 1.22949 14.4493 1.73926 14.1505 2.03809L8.52548 7.66309L14.1505 13.2969C14.4493 13.5957 14.4493 14.0967 14.1505 14.4043C13.8517 14.7119 13.3331 14.7031 13.0343 14.4043L7.40927 8.7793L1.78427 14.4043C1.48544 14.7031 0.975677 14.7031 0.66806 14.4043Z" fill="#293133"/>
+                    </svg>
+                </button>
+            </div>
+            <ul class="connect-watch__list">
+                <li class="connect-watch__item">
+                    <a href="#" class="connect-wach__link">
+                        <img class="connect-watch__img" src="./assets/img/garmin-watch.svg" alt="Garmin watch">
+                    </a>
+                </li>
+                <li class="connect-watch__item">
+                    <a href="#" class="connect-wach__link">
+                        <img class="connect-watch__img" src="./assets/img/polar-watch.svg" alt="Polar watch">
+                    </a>
+                </li>
+                <li class="connect-watch__item">
+                    <a href="#" class="connect-wach__link">
+                        <img class="connect-watch__img" src="./assets/img/suunto-watch.svg" alt="Suunto watch">
+                    </a>
+                </li>
+                <li class="connect-watch__item">
+                    <a href="#" class="connect-wach__link">
+                        <img class="connect-watch__img" src="./assets/img/coros-watch.svg" alt="Coros watch">
+                    </a>
+                </li>
+                <li class="connect-watch__item">
+                    <a href="#" class="connect-wach__link">
+                        <img class="connect-watch__img" src="./assets/img/apple-watch.svg" alt="Apple watch">
+                    </a>
+                </li>
+            </ul>
+            <div class="connect-watch__strava">
+                <p class="connect-watch__strava-header">If your sports watch isn't listed, connect Strava to receive training data</p>
+                <a href="#" class="connect-wach__link">
+                    <img class="connect-watch__img" src="./assets/img/strava-app.svg" alt="Garmin watch">
+                </a>
+            </div>
         </div>
 
         <script type="module" src="assets/js/index.js"></script>

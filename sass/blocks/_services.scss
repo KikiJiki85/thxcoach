@@ -47,6 +47,7 @@
     &__connect-watch {
         flex-direction: row;
         @include block-decor;
+        cursor: pointer;
     }
 
     &__find-coach {

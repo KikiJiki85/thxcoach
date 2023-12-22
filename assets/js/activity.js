@@ -49,6 +49,10 @@ const activityPick = () => {
     const emailConfirmation = document.querySelector('.email-confirmation');
     const emailConfirmationClose = document.querySelector('.email-confirmation__close');
 
+    const servicesConnectWatch = document.querySelector('.services__connect-watch');
+    const connectWatch = document.querySelector('.connect-watch');
+    const conncetWatchClose = document.querySelector('.connect-watch__close');
+
 
     scheduleCalendar.addEventListener('click', (evt) => {
         if (evt.target.classList.contains('schedule__add-activity') || evt.target.classList.contains('schedule__add-icon')) {
@@ -178,6 +182,22 @@ const activityPick = () => {
 
     emailConfirmationClose.addEventListener('click', () => {
         emailConfirmation.classList.remove('email-confirmation--show');
+        overlay.classList.remove('overlay--show');
+        body.classList.remove('no-scroll');
+    });
+
+    servicesConnectWatch.addEventListener('click', (evt) => {
+        if (!evt.target.classList.contains('services__connect-watch-close') &&
+            !evt.target.classList.contains('services__icon-close')) {
+            connectWatch.classList.add('connect-watch--show');
+            overlay.classList.add('overlay--show');
+            body.classList.add('no-scroll');
+        }
+
+    });
+
+    conncetWatchClose.addEventListener('click', () => {
+        connectWatch.classList.remove('connect-watch--show');
         overlay.classList.remove('overlay--show');
         body.classList.remove('no-scroll');
     });
