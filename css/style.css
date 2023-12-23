@@ -610,9 +610,6 @@ img {
 }
 
 @media (max-width: 767px) {
-  .page-header {
-    padding: 18px 16px;
-  }
   .page-header__burger {
     display: none;
   }
