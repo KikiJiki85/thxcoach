@@ -229,14 +229,23 @@ const activityPick = () => {
 
     desktopWidthMediaQuery.addEventListener('change', () => {
         if (desktopWidthMediaQuery.matches) {
-            sideMenu.classList.toggle('side-menu--show');
-            mainContent.classList.toggle('main-content--no-menu');
+            sideMenu.classList.add('side-menu--show');
+            mainContent.classList.remove('main-content--no-menu');
+            sideMenu.classList.remove('side-menu--show-mobile');
+            mainContent.classList.remove('main-content--menu-mobile');
         }
     });
 
     if (mobileWidthMediaQuery.matches) {
         sideMenu.classList.toggle('side-menu--show');
         mainContent.classList.toggle('main-content--no-menu');
+    }
+
+    if (desktopWidthMediaQuery.matches) {
+        sideMenu.classList.add('side-menu--show');
+        mainContent.classList.remove('main-content--no-menu');
+        sideMenu.classList.toggle('side-menu--show-mobile');
+        mainContent.classList.toggle('main-content--menu-mobile');
     }
 
 
