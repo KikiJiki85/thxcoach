@@ -5,6 +5,11 @@
     padding: 128px 32px 32px 251px;
     background-color: $bg-main;
     width: 100%;
+    transition: all 0.5s;
+
+    &--no-menu {
+        padding-left: 32px;
+    }
 
     &__plans {
         display: flex;
@@ -23,8 +28,12 @@
 
 @media (max-width: 992px) {
     .main-content {
-        padding: 116px 24px 24px 95px;
+        padding: 116px 24px 24px 65px;
         gap: 24px;
+
+        &--no-menu {
+            padding-left: 32px;
+        }
     }
 }
 
@@ -48,5 +57,9 @@
 @media (max-width: 767px) {
     .main-content {
         padding: 116px 16px 24px 16px;
+
+        &--menu-mobile {
+            padding-left: 57px;
+        }
     }
 }

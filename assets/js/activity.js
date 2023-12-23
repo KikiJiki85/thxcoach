@@ -53,6 +53,14 @@ const activityPick = () => {
     const connectWatch = document.querySelector('.connect-watch');
     const conncetWatchClose = document.querySelector('.connect-watch__close');
 
+    const pageHeaderBurger = document.querySelector('.page-header__burger');
+    const pageHeaderBurgerMobile = document.querySelector('.page-header__burger-mobile');
+    const sideMenu = document.querySelector('.side-menu');
+    const mainContent = document.querySelector('.main-content');
+
+    const mobileWidthMediaQuery = window.matchMedia('(max-width: 767px)');
+    const desktopWidthMediaQuery = window.matchMedia('(min-width: 768px)');
+
 
     scheduleCalendar.addEventListener('click', (evt) => {
         if (evt.target.classList.contains('schedule__add-activity') || evt.target.classList.contains('schedule__add-icon')) {
@@ -201,6 +209,37 @@ const activityPick = () => {
         overlay.classList.remove('overlay--show');
         body.classList.remove('no-scroll');
     });
+
+    pageHeaderBurger.addEventListener('click', () => {
+        sideMenu.classList.toggle('side-menu--show');
+        mainContent.classList.toggle('main-content--no-menu');
+    });
+
+    pageHeaderBurgerMobile.addEventListener('click', () => {
+        sideMenu.classList.toggle('side-menu--show-mobile');
+        mainContent.classList.toggle('main-content--menu-mobile');
+    });
+
+    mobileWidthMediaQuery.addEventListener('change', () => {
+        if (mobileWidthMediaQuery.matches) {
+            sideMenu.classList.toggle('side-menu--show');
+            mainContent.classList.toggle('main-content--no-menu');
+        }
+    });
+
+    desktopWidthMediaQuery.addEventListener('change', () => {
+        if (desktopWidthMediaQuery.matches) {
+            sideMenu.classList.toggle('side-menu--show');
+            mainContent.classList.toggle('main-content--no-menu');
+        }
+    });
+
+    if (mobileWidthMediaQuery.matches) {
+        sideMenu.classList.toggle('side-menu--show');
+        mainContent.classList.toggle('main-content--no-menu');
+    }
+
+
 
 };
 
