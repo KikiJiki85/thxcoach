@@ -13,7 +13,8 @@
         gap: 32px;
     }
 
-    &__burger {
+    &__burger,
+    &__burger-mobile {
         width: 40px;
         height: 40px;
         display: flex;
@@ -25,11 +26,23 @@
         outline: 4px solid $border-color;
         @include hover-effect;
     }
+
+    &__burger-mobile {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
     .page-header {
         padding: 18px 16px;
+
+        &__burger {
+            display: none;
+        }
+
+        &__burger-mobile {
+            display: flex;
+        }
 
         &__left-side {
             gap: 16px;
