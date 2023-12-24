@@ -53,6 +53,7 @@ const activityPick = () => {
     const connectWatch = document.querySelector('.connect-watch');
     const conncetWatchClose = document.querySelector('.connect-watch__close');
 
+    const pageHeader = document.querySelector('.page-header');
     const pageHeaderBurger = document.querySelector('.page-header__burger');
     const pageHeaderBurgerMobile = document.querySelector('.page-header__burger-mobile');
     const sideMenu = document.querySelector('.side-menu');
@@ -213,17 +214,20 @@ const activityPick = () => {
     pageHeaderBurger.addEventListener('click', () => {
         sideMenu.classList.toggle('side-menu--show');
         mainContent.classList.toggle('main-content--no-menu');
+        pageHeader.classList.toggle('menu-toggle');
     });
 
     pageHeaderBurgerMobile.addEventListener('click', () => {
         sideMenu.classList.toggle('side-menu--show-mobile');
         mainContent.classList.toggle('main-content--menu-mobile');
+        pageHeader.classList.toggle('menu-toggle');
     });
 
     mobileWidthMediaQuery.addEventListener('change', () => {
         if (mobileWidthMediaQuery.matches) {
             sideMenu.classList.toggle('side-menu--show');
             mainContent.classList.toggle('main-content--no-menu');
+            pageHeader.classList.remove('menu-toggle');
         }
     });
 
@@ -233,12 +237,14 @@ const activityPick = () => {
             mainContent.classList.remove('main-content--no-menu');
             sideMenu.classList.remove('side-menu--show-mobile');
             mainContent.classList.remove('main-content--menu-mobile');
+            pageHeader.classList.add('menu-toggle');
         }
     });
 
     if (mobileWidthMediaQuery.matches) {
         sideMenu.classList.toggle('side-menu--show');
         mainContent.classList.toggle('main-content--no-menu');
+        pageHeader.classList.remove('menu-toggle');
     }
 
     if (desktopWidthMediaQuery.matches) {
@@ -246,6 +252,7 @@ const activityPick = () => {
         mainContent.classList.remove('main-content--no-menu');
         sideMenu.classList.toggle('side-menu--show-mobile');
         mainContent.classList.toggle('main-content--menu-mobile');
+        pageHeader.classList.add('menu-toggle');
     }
 
 
