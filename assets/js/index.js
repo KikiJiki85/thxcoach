@@ -1,7 +1,9 @@
-import activityPick from "./activity.js";
+import setHeaderHandlers from "./header.js";
+import setDashboardHandlers from "./dashboard.js";
 
 function init() {
-    activityPick();
+    setHeaderHandlers();
+    setDashboardHandlers();
 }
 
 
