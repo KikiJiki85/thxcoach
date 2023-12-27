@@ -2566,7 +2566,7 @@ img {
   background-image: url("../assets/img/uncheck.svg");
   background-repeat: no-repeat;
   top: 12px;
-  left: 7px;
+  left: 5px;
 }
 .coaches-select__input:checked + .coaches-select__label::after {
   position: absolute;
@@ -2576,7 +2576,7 @@ img {
   background-image: url("../assets/img/check.svg");
   background-repeat: no-repeat;
   top: 12px;
-  left: 7px;
+  left: 5px;
 }
 
 @media (max-width: 767px) {
