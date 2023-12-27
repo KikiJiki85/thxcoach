@@ -2,6 +2,7 @@ import { miniModalHandler } from "./utils.js";
 
 const setHeaderHandlers = () => {
     const body = document.querySelector('.page__body');
+    const allModals = document.querySelectorAll('.modal');
 
     const overlay = document.querySelector('.overlay');
     const overlay2 = document.querySelector('.overlay2');
@@ -47,6 +48,11 @@ const setHeaderHandlers = () => {
         sideMenu.classList.toggle('side-menu--show-mobile');
         mainContent.classList.toggle('main-content--menu-mobile');
         pageHeader.classList.toggle('menu-toggle');
+
+        allModals.forEach(el => {
+            el.classList.toggle('modal--resize');
+        });
+
     });
 
     mobileWidthMediaQuery.addEventListener('change', () => {

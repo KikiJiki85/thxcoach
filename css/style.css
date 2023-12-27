@@ -951,7 +951,7 @@ img {
     padding: 116px 16px 24px 16px;
   }
   .main-content--menu-mobile {
-    padding-left: 57px;
+    padding-left: 65px;
   }
 }
 .services {
@@ -2586,4 +2586,8 @@ img {
   .coaches-select__fieldset, .coaches-select__search {
     max-width: 100%;
   }
+}
+.modal--resize {
+  max-width: 90%;
+  min-width: 90%;
 }/*# sourceMappingURL=style.css.map */
