@@ -2489,7 +2489,7 @@ img {
 }
 .coaches-select__fieldset {
   max-width: 266px;
-  padding: 16px 32px 16px 16px;
+  padding: 16px;
   border-radius: 32px;
   border: 1px solid rgba(80, 80, 80, 0.3);
   transition: all 0.5s;
@@ -2497,12 +2497,18 @@ img {
   position: relative;
   margin: 0;
   max-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-grow: 1;
 }
 .coaches-select__fieldset--picked {
   border-color: #293133;
 }
-.coaches-select__search-icon, .coaches-select__icon {
+.coaches-select__icon {
+  transition: all 0.5s;
+}
+.coaches-select__search-icon {
   position: absolute;
   right: 16px;
   top: 50%;
@@ -2510,7 +2516,7 @@ img {
   transform: translateY(-50%);
 }
 .coaches-select__icon--rotate {
-  transform: rotate(180deg) translateY(50%);
+  transform: rotate(180deg);
 }
 .coaches-select__placeholder {
   margin: 0;
@@ -2587,7 +2593,20 @@ img {
     max-width: 100%;
   }
 }
-.modal--resize {
-  max-width: 90%;
-  min-width: 90%;
+@media (max-width: 450px) {
+  .coaches-select__filter {
+    position: relative;
+  }
+  .coaches-select__fieldset {
+    position: static;
+  }
+}
+@media (max-width: 480px) {
+  .modal--resize {
+    max-width: 89%;
+    min-width: 89%;
+  }
+  .modal__calendar--resize {
+    width: calc(90% - 32px);
+  }
 }/*# sourceMappingURL=style.css.map */

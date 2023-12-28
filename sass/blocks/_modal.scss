@@ -1,6 +1,14 @@
-.modal {
-    &--resize {
-        max-width: 90%;
-        min-width: 90%;
+@media (max-width: 480px) {
+    .modal {
+        &--resize {
+            max-width: 89%;
+            min-width: 89%;
+        }
+
+        &__calendar {
+            &--resize {
+                width: calc(90% - 32px);
+            }
+        }
     }
 }

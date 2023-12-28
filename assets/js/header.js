@@ -3,6 +3,7 @@ import { miniModalHandler } from "./utils.js";
 const setHeaderHandlers = () => {
     const body = document.querySelector('.page__body');
     const allModals = document.querySelectorAll('.modal');
+    const calendarModal = document.querySelector('.calendar-modal');
 
     const overlay = document.querySelector('.overlay');
     const overlay2 = document.querySelector('.overlay2');
@@ -49,6 +50,7 @@ const setHeaderHandlers = () => {
         mainContent.classList.toggle('main-content--menu-mobile');
         pageHeader.classList.toggle('menu-toggle');
 
+        calendarModal.classList.toggle('modal__calendar--resize');
         allModals.forEach(el => {
             el.classList.toggle('modal--resize');
         });
@@ -70,6 +72,10 @@ const setHeaderHandlers = () => {
             sideMenu.classList.remove('side-menu--show-mobile');
             mainContent.classList.remove('main-content--menu-mobile');
             pageHeader.classList.add('menu-toggle');
+            calendarModal.classList.remove('modal__calendar--resize');
+            allModals.forEach(el => {
+                el.classList.remove('modal--resize');
+            });
         }
     });
 
@@ -86,7 +92,6 @@ const setHeaderHandlers = () => {
         mainContent.classList.toggle('main-content--menu-mobile');
         pageHeader.classList.add('menu-toggle');
     }
-
 
 };
 
