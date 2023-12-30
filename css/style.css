@@ -2662,6 +2662,9 @@ img {
   display: flex;
   align-self: center;
 }
+.coaches-select__page {
+  padding: 13px 0;
+}
 .coaches-select__page-link {
   padding: 13px 20px;
   cursor: pointer;
