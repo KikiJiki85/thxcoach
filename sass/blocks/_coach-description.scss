@@ -1,0 +1,211 @@
+.coach-description {
+    position: fixed;
+    overflow-y: scroll;
+    z-index: 10;
+    top: 96px;
+    right: 0;
+    bottom: 0;
+    min-width: 526px;
+    background-color: $bg-main;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: all 0.5s;
+    padding-bottom: 24px;
+
+    &--show {
+        transform: translateX(0%);
+    }
+
+    &__header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 16px;
+        border-bottom: 1px solid $bg-middle-light-grey;
+    }
+
+    &__header {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    &__close {
+        background-color: $bg-middle-light-grey;
+    }
+
+    &__crutch {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        margin: 16px 16px 24px 16px;
+        @include block-decor-no-hover;
+    }
+
+    &__card-header {
+        padding: 24px 16px 16px 16px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    &__experience,
+    &__location {
+        margin-top: 17px;
+        display: flex;
+        gap: 4px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__experience-text,
+    &__location-text {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    &__personal-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__photo {
+        width: 98px;
+        height: 98px;
+    }
+
+    &__name {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-top: 16px;
+    }
+
+    &__team {
+        margin: 0;
+        color: $font-color-secondary;
+        font-weight: 500;
+        margin-top: 4px;
+    }
+
+    &__kinds-list {
+        @include list-reset;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__kinds-item {
+        width: 42px;
+        height: 46px;
+    }
+
+    &__buttons-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    &__apply,
+    &__contact-coach {
+        min-width: 223px;
+    }
+
+    &__card-footer {
+        padding: 16px;
+        @include block-decor-no-hover;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $bg-light-grey;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 12px;
+    }
+
+    &__social,
+    &__web-site,
+    &__brief-more {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: $font-color-tertiary;
+        font-weight: 500;
+    }
+
+    &__brief-text {
+        max-width: 462px;
+        color: $font-color-tertiary;
+        margin: 0;
+        padding-top: 12px;
+        padding-bottom: 10px;
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        margin: 0 16px;
+        gap: 24px;
+    }
+
+    &__list-header {
+        color: $font-color-secondary;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    &__languages,
+    &__services {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__list {
+        margin: 0;
+        padding-left: 16px;
+        display: flex;
+        flex-direction: column;
+        max-height: 120px;
+        flex-wrap: wrap;
+    }
+
+    &__list-item {
+        color: $font-color-tertiary;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .pick-activity-modal {
+        min-width: 428px;
+    }
+}
+
+@media (max-width: 428px) {
+    .pick-activity-modal {
+        min-width: 100%;
+    }
+}
