@@ -1,9 +1,9 @@
 import setHeaderHandlers from "./header.js";
-import setFilterHandlers from "./filter.js";
+import setCoachesPickHandler from "./coaches-pick.js";
 
 function init() {
     setHeaderHandlers();
-    setFilterHandlers();
+    setCoachesPickHandler();
 }
 
 document.addEventListener('DOMContentLoaded', init);

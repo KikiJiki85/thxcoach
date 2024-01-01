@@ -6,6 +6,7 @@
     right: 0;
     bottom: 0;
     min-width: 526px;
+    max-width: 526px;
     background-color: $bg-main;
     display: flex;
     flex-direction: column;
@@ -71,6 +72,7 @@
         font-size: 14px;
         font-weight: 500;
         line-height: 20px;
+        text-align: center;
     }
 
     &__personal-info {
@@ -199,13 +201,32 @@
 }
 
 @media (max-width: 767px) {
-    .pick-activity-modal {
-        min-width: 428px;
+    .coach-description {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .coach-description {
+        &__buttons-wrapper {
+            flex-direction: column;
+            align-items: stretch;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
     }
 }
 
 @media (max-width: 428px) {
-    .pick-activity-modal {
-        min-width: 100%;
+    .coach-description {
+
+        &__links {
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        &__kinds-list {
+            gap: 8px;
+        }
     }
 }

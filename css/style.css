@@ -2720,6 +2720,7 @@ img {
   right: 0;
   bottom: 0;
   min-width: 526px;
+  max-width: 526px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -2781,6 +2782,7 @@ img {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
+  text-align: center;
 }
 .coach-description__personal-info {
   display: flex;
@@ -2894,13 +2896,25 @@ img {
 }
 
 @media (max-width: 767px) {
-  .pick-activity-modal {
-    min-width: 428px;
+  .coach-description {
+    min-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .coach-description__buttons-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 @media (max-width: 428px) {
-  .pick-activity-modal {
-    min-width: 100%;
+  .coach-description__links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .coach-description__kinds-list {
+    gap: 8px;
   }
 }
 @media (max-width: 480px) {
