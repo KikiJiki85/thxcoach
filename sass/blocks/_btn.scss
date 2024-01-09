@@ -30,8 +30,6 @@
                 background-color: $font-color-sixth;
             }
         }
-
-
     }
 
     @media (hover: hover) {
@@ -63,8 +61,6 @@
                 }
             }
         }
-
-
     }
 
     &__range {
@@ -93,6 +89,7 @@
         justify-content: center;
         cursor: pointer;
         min-width: 50%;
+        color: $font-color-primary;
 
         &--active {
             color: $font-color-fifth;

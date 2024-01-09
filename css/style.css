@@ -584,6 +584,7 @@ img {
   justify-content: center;
   cursor: pointer;
   min-width: 50%;
+  color: #293133;
 }
 .btn__filter--active {
   color: #ffffff;
@@ -2516,6 +2517,7 @@ img {
   transition: all 0.5s;
   cursor: pointer;
   height: 100%;
+  background-color: transparent;
 }
 .coaches-select__search-input::-webkit-input-placeholder {
   color: rgba(80, 80, 80, 0.6);
