@@ -150,7 +150,7 @@
             z-index: 1;
             opacity: 1;
         }
-        
+
     }
 
     &__filter-item {
@@ -206,6 +206,10 @@
         grid-template-rows: repeat(3, 1fr);
         row-gap: 32px;
         column-gap: 24px;
+    }
+
+    &__item {
+        cursor: pointer;
     }
 
     &__coach {

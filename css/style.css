@@ -1297,13 +1297,13 @@ img {
   flex-direction: column;
   border-radius: 24px;
   background-color: #F8F8F8;
-  padding: 8px;
+  padding: 8px 16px;
   gap: 4px;
   min-height: 114px;
   overflow: hidden;
   transition: background-color 0.3s;
 }
-@media (hover: hover) {
+@media (hover: hover) and (min-width: 768px) {
   .schedule__day:not(.schedule__previous-day):not(.schedule__next-month):hover {
     background-color: #f2f2f2;
   }
@@ -1350,6 +1350,8 @@ img {
   border-radius: 24px;
   background: #F8F8F8;
   cursor: pointer;
+}
+.schedule__add-activity :active {
   transform: scale(0.95);
 }
 .schedule__next-month-day {
@@ -1386,7 +1388,7 @@ img {
     max-height: -moz-fit-content;
     max-height: fit-content;
     flex-direction: row;
-    gap: 16px;
+    gap: 24px;
     min-height: 0;
   }
   .schedule__calendar {
@@ -2666,6 +2668,9 @@ img {
   row-gap: 32px;
   -moz-column-gap: 24px;
        column-gap: 24px;
+}
+.coaches-select__item {
+  cursor: pointer;
 }
 .coaches-select__coach {
   width: 100%;
