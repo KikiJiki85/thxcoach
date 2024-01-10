@@ -2571,6 +2571,8 @@ img {
 }
 .coaches-select__icon {
   transition: all 0.5s;
+  min-width: 11px;
+  min-height: 6px;
 }
 .coaches-select__icon-path {
   transition: all 0.5s;
