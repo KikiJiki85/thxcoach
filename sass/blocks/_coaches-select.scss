@@ -134,6 +134,7 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+        padding-right: 12px;
     }
 
     &__filter-list {
@@ -246,6 +247,10 @@
             border-radius: 32px;
             background-color: $bg-dark-grey
         }
+    }
+
+    &__active-color {
+        color: $font-color-primary;
     }
 
 }

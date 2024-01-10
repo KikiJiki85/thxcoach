@@ -45,9 +45,15 @@ const setCoachesPickHandler = () => {
                 const idx = locationsArray.indexOf(evt.target.name);
                 if(idx !== -1) locationsArray.splice(idx,1);
             }
-            if (locationPlaceholder.textContent === 'Location') locationPlaceholder.textContent = '';
+            if (locationPlaceholder.textContent === 'Location') {
+                locationPlaceholder.textContent = '';
+                locationPlaceholder.classList.add('coaches-select__active-color');
+            }
             locationPlaceholder.textContent = locationsArray.join(', ');
-            if (!locationsArray.length) locationPlaceholder.textContent = 'Location';
+            if (!locationsArray.length) {
+                locationPlaceholder.textContent = 'Location';
+                locationPlaceholder.classList.remove('coaches-select__active-color');
+            }
         });
     });
 
@@ -58,9 +64,16 @@ const setCoachesPickHandler = () => {
                 const idx = sportTypeArray.indexOf(evt.target.name);
                 if(idx !== -1) sportTypeArray.splice(idx,1);
             }
-            if (sportTypePlaceholder.textContent === 'Location') sportTypePlaceholder.textContent = '';
+            if (sportTypePlaceholder.textContent === 'Type of sport') {
+                sportTypePlaceholder.textContent = '';
+                sportTypePlaceholder.classList.add('coaches-select__active-color');
+            }
             sportTypePlaceholder.textContent = sportTypeArray.join(', ');
-            if (!sportTypeArray.length) sportTypePlaceholder.textContent = 'Type of sport';
+
+            if (!sportTypeArray.length) {
+                sportTypePlaceholder.textContent = 'Type of sport';
+                sportTypePlaceholder.classList.remove('coaches-select__active-color');
+            }
         });
     });
 
@@ -71,9 +84,16 @@ const setCoachesPickHandler = () => {
                 const idx = languageArray.indexOf(evt.target.name);
                 if(idx !== -1) languageArray.splice(idx,1);
             }
-            if (languagePlaceholder.textContent === 'Location') languagePlaceholder.textContent = '';
+            if (languagePlaceholder.textContent === 'Language') {
+                languagePlaceholder.textContent = '';
+                languagePlaceholder.classList.add('coaches-select__active-color');
+            }
+
             languagePlaceholder.textContent = languageArray.join(', ');
-            if (!languageArray.length) languagePlaceholder.textContent = 'Language';
+            if (!languageArray.length) {
+                languagePlaceholder.textContent = 'Language';
+                languagePlaceholder.classList.remove('coaches-select__active-color');
+            }
         });
     });
     // -------------------------

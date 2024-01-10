@@ -2597,6 +2597,7 @@ img {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  padding-right: 12px;
 }
 .coaches-select__filter-list {
   display: flex;
@@ -2702,6 +2703,9 @@ img {
   color: #ffffff;
   border-radius: 32px;
   background-color: #293133;
+}
+.coaches-select__active-color {
+  color: #293133;
 }
 
 @media (max-width: 991px) {
