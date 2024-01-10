@@ -62,7 +62,9 @@ const setDashboardHandlers = () => {
             evt.target.classList.contains('activity__done') ||
             evt.target.classList.contains('activity__name') ||
             evt.target.classList.contains('activity__icon') ||
-            evt.target.classList.contains('activity__stats')) {
+            evt.target.classList.contains('activity__stats') ||
+            evt.target.classList.contains('activity__stats-text') ||
+            evt.target.classList.contains('activity__stats-header')) {
             viewActivityModal.classList.toggle('view-activity--show');
             overlay.classList.toggle('overlay--show');
             body.classList.add('no-scroll');
