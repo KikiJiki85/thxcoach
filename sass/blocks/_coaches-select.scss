@@ -268,11 +268,19 @@
     .coaches-select {
         &__filter {
             flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
         }
 
         &__list {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
+        }
+
+        &__fieldset,
+        &__search {
+            max-width: 48%;
+            min-width: 48%;
         }
     }
 }

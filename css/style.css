@@ -2717,10 +2717,16 @@ img {
 @media (max-width: 767px) {
   .coaches-select__filter {
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
   .coaches-select__list {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+  }
+  .coaches-select__fieldset, .coaches-select__search {
+    max-width: 48%;
+    min-width: 48%;
   }
 }
 @media (max-width: 450px) {
