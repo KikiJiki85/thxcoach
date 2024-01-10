@@ -4,14 +4,17 @@
     gap: 32px;
 
     &__filter {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        // display: grid;
+        // grid-template-columns: repeat(4, minmax(50px, 1fr));
         gap: 16px;
+        display: flex;
         max-width: 1128px;
     }
 
     &__search {
-        max-width: 266px;
+        // max-width: 266px;
+        max-width: 22%;
+        min-width: 22%;
         border: none;
         margin: 0;
         padding: 0;
@@ -70,7 +73,6 @@
     }
 
     &__fieldset {
-        max-width: 266px;
         padding: 16px;
         border-radius: 32px;
         border: 1px solid $bg-light-grey;
@@ -82,7 +84,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-grow: 1;
+        max-width: 22%;
+        min-width: 22%;
 
         &--picked {
             border-color: $bg-dark-grey;
@@ -128,6 +131,9 @@
         margin: 0;
         color: $font-color-secondary;
         user-select: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     &__filter-list {
@@ -261,12 +267,7 @@
 @media (max-width: 767px) {
     .coaches-select {
         &__filter {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        &__fieldset,
-        &__search {
-            max-width: 100%;
+            flex-wrap: wrap;
         }
 
         &__list {
@@ -284,6 +285,12 @@
 
         &__fieldset {
             position: static;
+        }
+
+        &__fieldset,
+        &__search {
+            max-width: 45%;
+            min-width: 45%;
         }
 
         &__list {

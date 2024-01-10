@@ -2492,13 +2492,13 @@ img {
   gap: 32px;
 }
 .coaches-select__filter {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+  display: flex;
   max-width: 1128px;
 }
 .coaches-select__search {
-  max-width: 266px;
+  max-width: 22%;
+  min-width: 22%;
   border: none;
   margin: 0;
   padding: 0;
@@ -2543,7 +2543,6 @@ img {
   -webkit-appearance: none;
 }
 .coaches-select__fieldset {
-  max-width: 266px;
   padding: 16px;
   border-radius: 32px;
   border: 1px solid rgba(80, 80, 80, 0.3);
@@ -2555,7 +2554,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-grow: 1;
+  max-width: 22%;
+  min-width: 22%;
 }
 .coaches-select__fieldset--picked {
   border-color: #293133;
@@ -2594,6 +2594,9 @@ img {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .coaches-select__filter-list {
   display: flex;
@@ -2713,10 +2716,7 @@ img {
 }
 @media (max-width: 767px) {
   .coaches-select__filter {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .coaches-select__fieldset, .coaches-select__search {
-    max-width: 100%;
+    flex-wrap: wrap;
   }
   .coaches-select__list {
     grid-template-columns: repeat(2, 1fr);
@@ -2729,6 +2729,10 @@ img {
   }
   .coaches-select__fieldset {
     position: static;
+  }
+  .coaches-select__fieldset, .coaches-select__search {
+    max-width: 45%;
+    min-width: 45%;
   }
   .coaches-select__list {
     grid-template-columns: repeat(1, 1fr);

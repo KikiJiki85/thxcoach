@@ -64,7 +64,8 @@ const setDashboardHandlers = () => {
             evt.target.classList.contains('activity__icon') ||
             evt.target.classList.contains('activity__stats') ||
             evt.target.classList.contains('activity__stats-text') ||
-            evt.target.classList.contains('activity__stats-header')) {
+            evt.target.classList.contains('activity__stats-header') ||
+            evt.target.classList.contains('activity')) {
             viewActivityModal.classList.toggle('view-activity--show');
             overlay.classList.toggle('overlay--show');
             body.classList.add('no-scroll');
