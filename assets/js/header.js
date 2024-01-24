@@ -45,6 +45,7 @@ const setHeaderHandlers = () => {
     notifications.classList.add("notifications--show");
     overlay.classList.add("overlay--show");
     body.classList.add("no-scroll");
+    userProfileModal.classList.remove("profile--show");
   });
 
   notificationsClose.addEventListener("click", () => {
@@ -72,8 +73,15 @@ const setHeaderHandlers = () => {
 
   userProfile.addEventListener("click", () => {
     userProfileModal.classList.toggle("profile--show");
-    overlay.classList.toggle("overlay--show");
-    body.classList.toggle("no-scroll");
+    if (notifications.classList.contains("notifications--show")) {
+      notifications.classList.remove("notifications--show");
+    } else if (overlay.classList.contains("overlay--show")) {
+      body.classList.remove("no-scroll");
+      overlay.classList.remove("overlay--show");
+    } else {
+      body.classList.add("no-scroll");
+      overlay.classList.add("overlay--show");
+    }
   });
 
   userProfileClose.addEventListener("click", () => {
