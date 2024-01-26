@@ -3155,10 +3155,11 @@ img {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
 }
 .profile-notifications__item-header {
   font-size: 16px;
