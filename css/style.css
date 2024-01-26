@@ -3158,9 +3158,7 @@ img {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-.profile-notifications__label:active {
-  background-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .profile-notifications__item-header {
   font-size: 16px;
