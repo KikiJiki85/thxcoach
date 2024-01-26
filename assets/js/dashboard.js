@@ -44,7 +44,7 @@ const setDashboardHandlers = () => {
     activityPickedDistance.addEventListener('click', miniModalHandler(distanceModal, overlay2));
     distanceModalClose.addEventListener('click', miniModalHandler(distanceModal, overlay2))
     activityPickedPace.addEventListener('click', miniModalHandler(paceModal, overlay2));
-    paceModalClose.addEventListener('click', miniModalHandler(distanceModal, overlay2));
+    paceModalClose.addEventListener('click', miniModalHandler(paceModal, overlay2));
     activityPickedDuration.addEventListener('click', miniModalHandler(durationModal, overlay2));
     durationModalClose.addEventListener('click', miniModalHandler(durationModal, overlay2));
     activityPickedHeartRate.addEventListener('click', miniModalHandler(heartRateModal, overlay2));

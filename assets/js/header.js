@@ -13,21 +13,21 @@ const setHeaderHandlers = () => {
   const notificationsClose = document.querySelector(".notifications__close");
   const notificationsEdit = document.querySelector(".notifications__edit");
   const notificationsModal = document.querySelector(".notifications-modal");
-  const notificationsModalClose = document.querySelector(
-    ".notifications-modal__close"
-  );
+  const notificationsModalClose = document.querySelector(".notifications-modal__close");
 
   const pageHeader = document.querySelector(".page-header");
   const pageHeaderBurger = document.querySelector(".page-header__burger");
-  const pageHeaderBurgerMobile = document.querySelector(
-    ".page-header__burger-mobile"
-  );
+  const pageHeaderBurgerMobile = document.querySelector(".page-header__burger-mobile");
   const sideMenu = document.querySelector(".side-menu");
   const mainContent = document.querySelector(".main-content");
 
   const userProfile = document.querySelector(".user-menu__current-user");
   const userProfileModal = document.querySelector(".profile");
   const userProfileClose = document.querySelector(".profile__close");
+
+  const profileNotificationsLink = document.querySelector(".profile__notifications");
+  const profileNotifications = document.querySelector(".profile-notifications");
+  const profileNotificationsBack = document.querySelector(".profile-notifications__back");
 
   const mobileWidthMediaQuery = window.matchMedia("(max-width: 767px)");
   const desktopWidthMediaQuery = window.matchMedia("(min-width: 768px)");
@@ -46,6 +46,7 @@ const setHeaderHandlers = () => {
     overlay.classList.add("overlay--show");
     body.classList.add("no-scroll");
     userProfileModal.classList.remove("profile--show");
+    profileNotifications.classList.remove("profile-notifications--show");
   });
 
   notificationsClose.addEventListener("click", () => {
@@ -88,6 +89,14 @@ const setHeaderHandlers = () => {
     userProfileModal.classList.remove("profile--show");
     overlay.classList.remove("overlay--show");
     body.classList.remove("no-scroll");
+  });
+
+  profileNotificationsLink.addEventListener("click", () => {
+    profileNotifications.classList.add("profile-notifications--show");
+  });
+
+  profileNotificationsBack.addEventListener("click", () => {
+    profileNotifications.classList.remove("profile-notifications--show");
   });
 
   mobileWidthMediaQuery.addEventListener("change", () => {
