@@ -1,4 +1,4 @@
-.profile-devices {
+.profile-language {
   position: fixed;
   overflow-y: scroll;
   z-index: 11;
@@ -40,8 +40,7 @@
     margin: 0;
   }
 
-  &__back,
-  &__add {
+  &__back {
     width: 40px;
     height: 40px;
     display: flex;
@@ -60,13 +59,18 @@
     }
   }
 
+  &__crutch {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+  }
+
   &__list {
     @include list-reset;
     padding: 0 16px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    margin-top: -16px;
+    gap: 32px;
   }
 
   &__label {
@@ -119,17 +123,17 @@
 
   &__checkbox:not(:disabled):checked
     + label
-    .profile-devices__trigger-container {
+    .profile-language__trigger-container {
     background-color: #96c018;
   }
 
-  &__checkbox:not(:disabled):checked + label .profile-devices__trigger {
+  &__checkbox:not(:disabled):checked + label .profile-language__trigger {
     transform: translateX(22px);
   }
 }
 
 @media (max-width: 460px) {
-  .profile-devices {
+  .profile-language {
     min-width: 100%;
   }
 }

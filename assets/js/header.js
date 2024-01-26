@@ -33,6 +33,10 @@ const setHeaderHandlers = () => {
   const profileDevices = document.querySelector(".profile-devices");
   const profileDevicesBack = document.querySelector(".profile-devices__back");
 
+  const profileLanguageLink = document.querySelector(".profile__language");
+  const profileLanguage = document.querySelector(".profile-language");
+  const profileLanguageBack = document.querySelector(".profile-language__back");
+
   const mobileWidthMediaQuery = window.matchMedia("(max-width: 767px)");
   const desktopWidthMediaQuery = window.matchMedia("(min-width: 768px)");
 
@@ -46,6 +50,7 @@ const setHeaderHandlers = () => {
     userProfileModal.classList.remove("profile--show");
     profileNotifications.classList.remove("profile-notifications--show");
     profileDevices.classList.remove("profile-devices--show");
+    profileLanguage.classList.remove("profile-language--show");
   });
 
   notificationsClose.addEventListener("click", () => {
@@ -104,6 +109,14 @@ const setHeaderHandlers = () => {
 
   profileDevicesBack.addEventListener("click", () => {
     profileDevices.classList.remove("profile-devices--show");
+  });
+
+  profileLanguageLink.addEventListener("click", () => {
+    profileLanguage.classList.add("profile-language--show");
+  });
+
+  profileLanguageBack.addEventListener("click", () => {
+    profileLanguage.classList.remove("profile-language--show");
   });
 
   mobileWidthMediaQuery.addEventListener("change", () => {
