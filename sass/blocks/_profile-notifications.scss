@@ -73,6 +73,9 @@
     align-items: center;
     cursor: pointer;
     user-select: none;
+    &:active {
+      background-color: transparent;
+    }
   }
 
   &__item-header {
