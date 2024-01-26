@@ -1,83 +1,86 @@
 .connect-watch {
-    position: fixed;
-    overflow-y: scroll;
-    z-index: 10;
-    top: 96px;
-    right: 0;
-    bottom: 0;
-    max-width: 460px;
-    background-color: $bg-main;
+  position: fixed;
+  overflow-y: scroll;
+  z-index: 10;
+  top: 96px;
+  right: 0;
+  bottom: 0;
+  max-width: 460px;
+  background-color: $bg-main;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: all 0.5s;
+  padding-bottom: 24px;
+
+  &--show {
+    transform: translateX(0%);
+  }
+
+  &--up {
+    z-index: 12;
+  }
+
+  &__header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 16px;
+    border-bottom: 1px solid $bg-middle-light-grey;
+  }
+
+  &__header {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  &__close {
+    background-color: $bg-middle-light-grey;
+  }
+
+  &__crutch {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+  }
+
+  &__list {
+    @include list-reset;
     display: flex;
     flex-direction: column;
-    transform: translateX(100%);
-    transition: all 0.5s;
-    padding-bottom: 24px;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px 0;
+    margin: 0 16px;
+    border-bottom: 1px solid $bg-middle-light-grey;
+  }
 
-    &--show {
-        transform: translateX(0%);
-    }
+  &__strava {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    gap: 16px;
+  }
 
-    &__header-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 16px;
-        border-bottom: 1px solid $bg-middle-light-grey;
-    }
-
-    &__header {
-        text-align: center;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 24px;
-    }
-
-    &__close {
-        background-color: $bg-middle-light-grey;
-    }
-
-    &__crutch {
-        width: 40px;
-        height: 40px;
-        background-color: transparent;
-    }
-
-    &__list {
-        @include list-reset;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 32px;
-        padding: 32px 0;
-        margin: 0 16px;
-        border-bottom: 1px solid $bg-middle-light-grey;
-    }
-
-    &__strava {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 32px 16px;
-        gap: 16px;
-    }
-
-    &__strava-header {
-        margin: 0;
-        text-align: center;
-    }
-
+  &__strava-header {
+    margin: 0;
+    text-align: center;
+  }
 }
 
 @media (max-width: 767px) {
-    .email-confirmation {
-        min-width: 428px;
-    }
+  .email-confirmation {
+    min-width: 428px;
+  }
 }
 
 @media (max-width: 428px) {
-    .email-confirmation {
-        min-width: 100%;
-    }
+  .email-confirmation {
+    min-width: 100%;
+  }
 }

@@ -29,17 +29,15 @@ const setHeaderHandlers = () => {
   const profileNotifications = document.querySelector(".profile-notifications");
   const profileNotificationsBack = document.querySelector(".profile-notifications__back");
 
+  const profileDevicesLink = document.querySelector(".profile__devices");
+  const profileDevices = document.querySelector(".profile-devices");
+  const profileDevicesBack = document.querySelector(".profile-devices__back");
+
   const mobileWidthMediaQuery = window.matchMedia("(max-width: 767px)");
   const desktopWidthMediaQuery = window.matchMedia("(min-width: 768px)");
 
-  notificationsEdit.addEventListener(
-    "click",
-    miniModalHandler(notificationsModal, overlay2)
-  );
-  notificationsModalClose.addEventListener(
-    "click",
-    miniModalHandler(notificationsModal, overlay2)
-  );
+  notificationsEdit.addEventListener("click", miniModalHandler(notificationsModal, overlay2));
+  notificationsModalClose.addEventListener("click", miniModalHandler(notificationsModal, overlay2));
 
   notifyButton.addEventListener("click", () => {
     notifications.classList.add("notifications--show");
@@ -47,6 +45,7 @@ const setHeaderHandlers = () => {
     body.classList.add("no-scroll");
     userProfileModal.classList.remove("profile--show");
     profileNotifications.classList.remove("profile-notifications--show");
+    profileDevices.classList.remove("profile-devices--show");
   });
 
   notificationsClose.addEventListener("click", () => {
@@ -97,6 +96,14 @@ const setHeaderHandlers = () => {
 
   profileNotificationsBack.addEventListener("click", () => {
     profileNotifications.classList.remove("profile-notifications--show");
+  });
+
+  profileDevicesLink.addEventListener("click", () => {
+    profileDevices.classList.add("profile-devices--show");
+  });
+
+  profileDevicesBack.addEventListener("click", () => {
+    profileDevices.classList.remove("profile-devices--show");
   });
 
   mobileWidthMediaQuery.addEventListener("change", () => {
